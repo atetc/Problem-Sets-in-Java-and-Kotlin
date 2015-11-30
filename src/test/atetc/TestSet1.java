@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class TestAdditionalSet1 {
+public class TestSet1 {
 
     @Test
     public void testFindUnpaired_1_1(){
