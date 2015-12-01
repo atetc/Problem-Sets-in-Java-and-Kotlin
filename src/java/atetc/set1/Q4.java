@@ -18,7 +18,7 @@ public class Q4 {
             result[i] = new int[]{rn.nextInt(), rn.nextInt(), rn.nextInt()};
         }
 
-        return new int[][]{{1, 3, 1}, {3, 1, 2}};
+        return result;
     }
 
     public static boolean isCollinear(int[][] pointsCoordinates) {
