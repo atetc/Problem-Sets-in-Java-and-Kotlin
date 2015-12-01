@@ -60,5 +60,6 @@ public class TestSet1 {
         assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(0)));
         assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(1)));
         assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(2)));
+        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(3)));
     }
 }

@@ -23,8 +23,8 @@ public class Q4 {
         return result;
     }
 
-    public static boolean isCollinear(int[][] pointsCoordinates) {
-        if (pointsCoordinates == null || pointsCoordinates.length < 9) {
+    public static boolean isCollinear(int[][] points) {
+        if (points == null || points.length < 3) {
             return false;
         }
 
