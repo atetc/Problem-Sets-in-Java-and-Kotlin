@@ -33,6 +33,7 @@ import java.util.Set;
 
  There are 3 pairs of integers in the set with a difference of 2.
  */
+
 public class Q3 {
 
     public static Integer getCountOfPairsWithDifference(int[] arr, int diff) {
