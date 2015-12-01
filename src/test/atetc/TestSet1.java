@@ -11,5 +11,10 @@ public class TestSet1 {
     public void testFindUnpaired_1_1(){
         int[] arr = {1, 1, 2, 2, 3, 3, 5, 66, 66};
         assertTrue(Q1.findUnpaired(arr) == 5);
+
+        assertTrue(Q1.findUnpaired(null) == null);
+
+        arr = new int[]{1};
+        assertTrue(Q1.findUnpaired(arr) == 1);
     }
 }
