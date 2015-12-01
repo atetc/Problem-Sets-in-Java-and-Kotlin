@@ -64,6 +64,9 @@
                                         
                                          There are 3 pairs of integers in the set with a difference of 2.
                                         
+[SET 1.4] (src/java/atetc/set1/Q4.java) Place N points in 3d, so that none 3 are on one line.
+                                        Input: integer N.
+                                        Output: 3 * N coordinates of points, so that no 3 of the points are on one line.
 
 ###Testing
 

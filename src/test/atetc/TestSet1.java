@@ -54,4 +54,11 @@ public class TestSet1 {
         arr = new int[]{1, 9, 5, 4};
         assertTrue(Q3.getCountOfPairsWithDifference(arr, 5) == 1);
     }
+
+    @Test
+    public void testPlacePointsIn3D_1_4(){
+        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(0)));
+        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(1)));
+        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(2)));
+    }
 }
