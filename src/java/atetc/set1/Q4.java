@@ -11,11 +11,13 @@ import java.util.Random;
 public class Q4 {
 
     public static int[][] placePointsIn3D(int n) {
-        int[][] result = new int[n][];
+        int[][] result = new int[n][3];
 
         Random rn = new Random();
         for (int i = 0; i < n; i++) {
-            result[i] = new int[]{rn.nextInt(), rn.nextInt(), rn.nextInt()};
+            for (int j = 0; j < 3; j++) {
+                result[i][j] = rn.nextInt();
+            }
         }
 
         return result;
