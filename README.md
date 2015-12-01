@@ -15,10 +15,10 @@
                                          For each test case print YES if there exists an element in the array, such that the sum of the elements on its left is equal to the sum of the elements on its right; otherwise print NO.
                                          
                                          Constraints:
-                                         1≤T≤10
-                                         1≤N≤105
-                                         1≤Ai ≤2×104
-                                         1≤i≤N
+                                         1 ≤ T ≤ 10
+                                         1 ≤N ≤ 10^5
+                                         1 ≤Ai ≤ 2 × 10^4
+                                         1 ≤ i ≤ N
                                          
                                          Sample Input:
                                          2
@@ -37,8 +37,6 @@
                                          
 [SET 1.3] (src/java/atetc/set1/Q3.java) 
 
-                                         Problem Statement
-                                        
                                          Given N integers, count the number of pairs of integers whose difference is K.
                                         
                                          Input Format

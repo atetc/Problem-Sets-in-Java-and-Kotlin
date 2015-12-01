@@ -4,9 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Problem Statement
-
- Given N integers, count the number of pairs of integers whose difference is K.
+ * Given N integers, count the number of pairs of integers whose difference is K.
 
  Input Format
 
