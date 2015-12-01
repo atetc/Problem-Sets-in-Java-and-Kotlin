@@ -15,19 +15,46 @@ public class Q4 {
 
         Random rn = new Random();
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < 3; j++) {
-                result[i][j] = rn.nextInt();
+            boolean isCollinear = true;
+            while (isCollinear) {
+                for (int j = 0; j < 3; j++) {
+                    result[i][j] = rn.nextInt(10);
+                }
+
+                isCollinear = isCollinearIn2D(result, i + 1);
             }
         }
 
         return result;
     }
 
-    public static boolean isCollinear(int[][] points) {
-        if (points == null || points.length < 3) {
+    public static boolean isCollinearIn2D(int[][] points, int count) {
+        if (points == null | count < 3) {
             return false;
         }
 
-        return true;
+        for (int i = 0; i < count - 2; i++) {
+            for (int j = i + 1; j < count - 1; j++) {
+                for (int k = j + 1; k < count; k++) {
+                    if (isCollinearIn2D(points[i], points[j], points[k])) {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public static boolean isCollinearIn2D(int[] a, int[] b, int[] c) {
+        if (a[0] == b[0]) {
+            return c[0] == a[0];
+        }
+
+        if (b[0] == c[0] || (c[0] == a[0])) {
+            return false;
+        }
+
+        return ((b[1] - a[1]) / (b[0] - a[0]) == (c[1] - b[1]) / (c[0] - b[0])) ;
     }
 }

@@ -57,9 +57,12 @@ public class TestSet1 {
 
     @Test
     public void testPlacePointsIn3D_1_4(){
-        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(0)));
-        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(1)));
-        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(2)));
-        assertTrue(!Q4.isCollinear(Q4.placePointsIn3D(3)));
+        // TODO: isCollinearIn3D needed for test
+        assertTrue(!Q4.isCollinearIn2D(Q4.placePointsIn3D(0), 0));
+        assertTrue(!Q4.isCollinearIn2D(Q4.placePointsIn3D(1), 1));
+        assertTrue(!Q4.isCollinearIn2D(Q4.placePointsIn3D(2), 2));
+        assertTrue(!Q4.isCollinearIn2D(Q4.placePointsIn3D(3), 3));
+        assertTrue(!Q4.isCollinearIn2D(Q4.placePointsIn3D(4), 4));
+        assertTrue(!Q4.isCollinearIn2D(Q4.placePointsIn3D(5), 5));
     }
 }
