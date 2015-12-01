@@ -34,4 +34,24 @@ public class TestSet1 {
         arr = new int[]{1, 2, 4, 6};
         assertTrue(!Q2.isLeftRightArraysSumEqual(arr));
     }
+
+    @Test
+    public void testGetCountOfPairsWithDifference_1_3(){
+        assertTrue(Q3.getCountOfPairsWithDifference(null, 5) == null);
+
+        int[] arr = new int[]{1};
+        assertTrue(Q3.getCountOfPairsWithDifference(arr, 5) == null);
+
+        arr = new int[]{1, 5};
+        assertTrue(Q3.getCountOfPairsWithDifference(arr, 4) == 1);
+
+        arr = new int[]{1, 5};
+        assertTrue(Q3.getCountOfPairsWithDifference(arr, 5) == 0);
+
+        arr = new int[]{1, 9, 5};
+        assertTrue(Q3.getCountOfPairsWithDifference(arr, 4) == 2);
+
+        arr = new int[]{1, 9, 5, 4};
+        assertTrue(Q3.getCountOfPairsWithDifference(arr, 5) == 1);
+    }
 }
