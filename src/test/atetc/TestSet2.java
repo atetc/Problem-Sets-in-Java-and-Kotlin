@@ -26,5 +26,8 @@ public class TestSet2 {
     public void testFindMinimalButtonsClick_2_2(){
         assertTrue(Q2.findUnpaired(null) == null);
         assertTrue(Arrays.equals(Q2.findUnpaired(new int[] {5}), new int[] {5}));
+        assertTrue(Arrays.equals(Q2.findUnpaired(new int[] {5, 1}), new int[] {5, 1}));
+        int[] unpaired = Q2.findUnpaired(new int[]{5, 1, 5, 3});
+        assertTrue(Arrays.equals(unpaired, new int[] {1, 3}));
     }
 }

@@ -1,5 +1,7 @@
 package atetc.set2;
 
+import java.util.HashSet;
+
 /**
  * You've got an array of ints (array is NOT sorted). Find two elements without a pair.
  */
@@ -10,10 +12,29 @@ public class Q2 {
             return null;
         }
 
-        if (arr.length < 2) {
+        if (arr.length < 2
+                || (arr.length == 2 && arr[0] != arr[1])) {
             return arr;
         }
 
-        return null;
+        HashSet<Integer> hashSet = new HashSet<>();
+
+        for (int i : arr) {
+            if (hashSet.contains(i)) {
+                hashSet.remove(i);
+            } else {
+                hashSet.add(i);
+            }
+        }
+
+        int[] result = new int[hashSet.size()];
+        int j = 0;
+        for (Integer integer : hashSet) {
+            result[j] = integer;
+            j++;
+        }
+
+
+        return result;
     }
 }

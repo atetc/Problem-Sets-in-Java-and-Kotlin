@@ -100,6 +100,8 @@
                                         
                                         In the second example, doubling the number is unnecessary, so we need to push the blue button nine times.
 
+[SET 2.2] (src/java/atetc/set2/Q2.java) You've got an array of ints (array is NOT sorted). Find two elements without a pair.
+
 ###Testing
 
 [Coverage by tests 2.1 - 2.3](src/test/atetc/TestSet2.java)
