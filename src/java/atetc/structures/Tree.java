@@ -20,7 +20,6 @@ public class Tree<T> {
 
     public static class Node<T> {
         private T data;
-        private Node<T> parent;
         private List<Node<T>> children = new ArrayList<>();
 
         public Node(T data) {
@@ -28,14 +27,11 @@ public class Tree<T> {
         }
 
         public void addChildren(Node<T> ... nodes) {
-            for (Node<T> node : nodes) {
-                node.parent = this;
-                children.add(node);
-            }
+            Collections.addAll(children, nodes);
         }
 
-        public Node<T> getParent() {
-            return parent;
+        public List<Node<T>> getChildren() {
+            return children;
         }
 
         @Override

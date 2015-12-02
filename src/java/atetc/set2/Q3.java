@@ -9,17 +9,26 @@ import atetc.structures.Tree;
 public class Q3 {
 
     public static boolean isAncestor(Tree.Node<Integer> node1, Tree.Node<Integer> node2) {
-        if (node1 == null || node2 == null | node1.equals(node2)) {
+        if (node1 == null || node2 == null) {
             return false;
         }
 
-        Tree.Node<Integer> node = node2;
-        while (node.getParent() != null) {
-            if (node.equals(node1)) {
+        if (node1.equals(node2)) {
+            return false;
+        }
+
+        if (node1.getChildren().isEmpty()) {
+            return false;
+        }
+
+        for (Tree.Node<Integer> node : node1.getChildren()) {
+            if (node.equals(node2)) {
                 return true;
             }
 
-            node = node.getParent();
+            if (isAncestor(node, node2)) {
+                return true;
+            }
         }
 
         return false;
