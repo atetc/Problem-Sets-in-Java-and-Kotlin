@@ -12,8 +12,7 @@ public class Q2 {
             return null;
         }
 
-        if (arr.length < 2
-                || (arr.length == 2 && arr[0] != arr[1])) {
+        if (arr.length < 2) {
             return arr;
         }
 

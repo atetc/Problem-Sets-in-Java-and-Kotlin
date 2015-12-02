@@ -102,6 +102,8 @@
 
 [SET 2.2] (src/java/atetc/set2/Q2.java) You've got an array of ints (array is NOT sorted). Find two elements without a pair.
 
+[SET 2.3] (src/java/atetc/set2/Q3.java) You've got an array of ints (array is NOT sorted). Find two elements without a pair.
+
 ###Testing
 
 [Coverage by tests 2.1 - 2.3](src/test/atetc/TestSet2.java)
