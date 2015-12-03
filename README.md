@@ -107,3 +107,14 @@
 ###Testing
 
 [Coverage by tests 2.1 - 2.3](src/test/atetc/TestSet2.java)
+
+##Set 24
+
+[SET 24.1] (src/java/atetc/set24/Q1.java) Given the number N with up to 10^6 digits and M.
+                                            Find the number of partitions where each partition is divisible by M.
+                                            If answer is larger then (10^9+7), find the answer modulo (10^9+7)
+                                            Example: for input N=12123, M=3 partitions are: [12123], [12][123],[12][12][3],[1212][3] 
+
+###Testing
+
+[Coverage by tests 24.1 - 24.4](src/test/atetc/TestSet24.java)
