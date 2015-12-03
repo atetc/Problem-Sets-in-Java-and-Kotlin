@@ -113,7 +113,12 @@
 [SET 24.1] (src/java/atetc/set24/Q1.java) Given the number N with up to 10^6 digits and M.
                                             Find the number of partitions where each partition is divisible by M.
                                             If answer is larger then (10^9+7), find the answer modulo (10^9+7)
-                                            Example: for input N=12123, M=3 partitions are: [12123], [12][123],[12][12][3],[1212][3] 
+                                            Example: for input N=12123, M=3 partitions are: [12123], [12][123],[12][12][3],[1212][3]
+                                             
+[SET 24.2] (src/java/atetc/set24/Q2.java) Amazon interview.
+                                          Write a method that takes in a positive integer, return the number of 2s between 0 and the input number.
+                                          If the input value given is 13, it should return 2 as the number 2 and 12 are between 0 and 13.
+                                          If the input value given is 21, it should return 3 as the number 2,12 and 20 are between 0 and 21.
 
 ###Testing
 
