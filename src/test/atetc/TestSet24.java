@@ -25,7 +25,7 @@ public class TestSet24 {
     }
 
     @Test
-    public void testGetNumberWithTwoDigit_24_1(){
+    public void testGetNumberWithTwoDigit_24_2(){
         assertTrue(Q2.getNumberOf2s(0) == null);
         assertTrue(Q2.getNumberOf2s(1) == null);
         assertTrue(Q2.getNumberOf2s(2) == null);
@@ -35,7 +35,7 @@ public class TestSet24 {
     }
 
     @Test
-    public void testRemoveHead_24_1(){
+    public void testRemoveHead_24_3(){
         Node<Integer> head = new Node<>(5);
         Node<Integer> next = new Node<>(3);
         head.setNext(next)
@@ -44,5 +44,15 @@ public class TestSet24 {
                 .setNext(new Node<>(4))));
 
         assertTrue(Q3.removeHead(head) == next);
+    }
+
+    @Test
+    public void testGetNumberOfDifferentWaysForPurchase_24_4(){
+        int[] coins = {1, 2, 5, 10, 20, 50};
+
+        assertTrue(Q4.getNumberOfDifferentWaysForPurchase(coins, 0) == 0);
+        assertTrue(Q4.getNumberOfDifferentWaysForPurchase(coins, 1) == 1);
+        assertTrue(Q4.getNumberOfDifferentWaysForPurchase(coins, 3) == 2);
+        assertTrue(Q4.getNumberOfDifferentWaysForPurchase(coins, 4) == 3);
     }
 }
