@@ -1,6 +1,7 @@
 package atetc;
 
 import atetc.set24.*;
+import atetc.structures.SinglyLinkedList.Node;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -24,12 +25,24 @@ public class TestSet24 {
     }
 
     @Test
-    public void testNumberOf2s_24_1(){
+    public void testGetNumberWithTwoDigit_24_1(){
         assertTrue(Q2.getNumberOf2s(0) == null);
         assertTrue(Q2.getNumberOf2s(1) == null);
         assertTrue(Q2.getNumberOf2s(2) == null);
         assertTrue(Q2.getNumberOf2s(3).equals(new ArrayList<>(Arrays.asList(2))));
         assertTrue(Q2.getNumberOf2s(13).equals(new ArrayList<>(Arrays.asList(2, 12))));
         assertTrue(Q2.getNumberOf2s(21).equals(new ArrayList<>(Arrays.asList(2, 12, 20))));
+    }
+
+    @Test
+    public void testRemoveHead_24_1(){
+        Node<Integer> head = new Node<>(5);
+        Node<Integer> next = new Node<>(3);
+        head.setNext(next)
+                .setNext(new Node<>(7)
+                .setNext(new Node<>(123)
+                .setNext(new Node<>(4))));
+
+        assertTrue(Q3.removeHead(head) == next);
     }
 }
