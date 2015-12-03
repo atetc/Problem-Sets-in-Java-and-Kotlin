@@ -7,7 +7,11 @@ package atetc.set24;
  */
 public class Q4 {
 
-    public static int getNumberOfDifferentWaysForPurchase(int[] coins, int i) {
+    public static int getNumberOfDifferentWaysForPurchase(int[] coins, int cost) {
+        if (cost == 0) {
+            return 0;
+        }
+
         return 0;
     }
 }
