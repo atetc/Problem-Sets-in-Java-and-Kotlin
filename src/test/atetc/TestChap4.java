@@ -5,10 +5,10 @@ package atetc;
  */
 
 import org.junit.Test;
-import wzhishen.chap04.*;
-import wzhishen.helpers.DGraph;
-import wzhishen.helpers.GraphNode;
-import wzhishen.helpers.TreeNode;
+import atetc.chap04.*;
+import atetc.helpers.DGraph;
+import atetc.helpers.GraphNode;
+import atetc.helpers.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

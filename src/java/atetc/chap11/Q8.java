@@ -1,7 +1,6 @@
 package atetc.chap11;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.println;
 
 /**
  * Imagine you are reading in a stream of integers. Periodically,

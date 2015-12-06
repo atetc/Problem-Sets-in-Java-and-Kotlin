@@ -1,7 +1,6 @@
 package atetc.chap11;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.println;
 
 /**
  * Given a sorted array of n integers that has been rotated an

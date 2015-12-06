@@ -3,8 +3,7 @@ package atetc.helpers;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.println;
 
 public class Trie {
     public static class TrieNode {

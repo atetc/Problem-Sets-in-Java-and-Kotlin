@@ -5,7 +5,7 @@ package atetc;
  */
 
 import org.junit.Test;
-import wzhishen.chap07.*;
+import atetc.chap07.*;
 
 import static org.junit.Assert.assertTrue;
 

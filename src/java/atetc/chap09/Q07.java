@@ -1,6 +1,6 @@
 package atetc.chap09;
 
-import static wzhishen.helpers.Printer.*;
+import static atetc.helpers.Printer.*;
 
 /**
  * Implement the "paint fill" function that one might see on

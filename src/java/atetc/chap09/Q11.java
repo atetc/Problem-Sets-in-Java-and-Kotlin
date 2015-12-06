@@ -2,8 +2,8 @@ package atetc.chap09;
 
 import java.util.HashMap;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.*;
+import static atetc.helpers.Printer.println;
 
 /**
  * Given a boolean expression consisting of the symbols (0, 1, &,

@@ -2,8 +2,7 @@ package atetc.chap09;
 
 import java.util.ArrayList;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.println;
 
 /**
  * Write a method to compute all permutations of a string.

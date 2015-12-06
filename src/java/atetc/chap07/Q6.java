@@ -3,8 +3,8 @@ package atetc.chap07;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.*;
+import static atetc.helpers.Printer.println;
 
 /**
  * Given a two-dimensional graph with points on it, find a line

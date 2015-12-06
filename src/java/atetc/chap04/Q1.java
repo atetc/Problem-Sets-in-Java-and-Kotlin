@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import wzhishen.helpers.TreeNode;
+import atetc.helpers.TreeNode;
 
 /**
  * Implement a function to check if a binary tree is balanced.

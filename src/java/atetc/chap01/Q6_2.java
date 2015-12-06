@@ -1,6 +1,6 @@
 package atetc.chap01;
 
-import static wzhishen.helpers.Printer.*;
+import static atetc.helpers.Printer.*;
 
 public class Q6_2 {
 

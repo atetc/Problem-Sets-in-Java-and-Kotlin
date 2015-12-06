@@ -1,13 +1,13 @@
 package atetc.other;
 
-import wzhishen.helpers.LinkedListNode;
-import wzhishen.helpers.TreeNode;
+import atetc.helpers.LinkedListNode;
+import atetc.helpers.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Stack;
 
-import static wzhishen.helpers.Printer.*;
+import static atetc.helpers.Printer.*;
 
 /**
  * Created by Atetc on 12.11.2015.

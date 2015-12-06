@@ -1,7 +1,7 @@
 package atetc.chap11;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.printArray;
+import static atetc.helpers.Printer.*;
+import static atetc.helpers.Printer.printArray;
 
 /**
  * You are given two sorted arrays, A and B, where A has a large

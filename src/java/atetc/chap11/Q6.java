@@ -1,7 +1,7 @@
 package atetc.chap11;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.printArray;
+import static atetc.helpers.Printer.*;
+import static atetc.helpers.Printer.printArray;
 
 /**
  * Given an M x N matrix in which each row and each column

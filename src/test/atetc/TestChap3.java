@@ -5,7 +5,7 @@ package atetc;
  */
 
 import org.junit.Test;
-import wzhishen.chap03.*;
+import atetc.chap03.*;
 
 import java.util.Arrays;
 import java.util.Stack;

@@ -5,7 +5,7 @@ package atetc;
  */
 
 import org.junit.Test;
-import wzhishen.chap01.*;
+import atetc.chap01.*;
 
 import java.util.Arrays;
 

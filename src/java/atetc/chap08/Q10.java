@@ -2,7 +2,7 @@ package atetc.chap08;
 
 import java.util.LinkedList;
 
-import static wzhishen.helpers.Printer.*;
+import static atetc.helpers.Printer.*;
 
 /**
  * Design and implement a hash table which uses chaining (linked

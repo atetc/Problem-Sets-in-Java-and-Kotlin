@@ -3,7 +3,7 @@ package atetc.chap09;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.println;
 
 /**
  * Implement an algorithm to print all valid (e.g., properly

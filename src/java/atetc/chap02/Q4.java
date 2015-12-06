@@ -1,6 +1,6 @@
 package atetc.chap02;
 
-import wzhishen.helpers.LinkedListNode;
+import atetc.helpers.LinkedListNode;
 
 /**
  * You have two numbers represented by a linked list, where each node contains a

@@ -1,8 +1,6 @@
 package atetc.chap04;
 
-import wzhishen.helpers.TreeNode;
-
-import static wzhishen.helpers.Printer.*;
+import atetc.helpers.TreeNode;
 
 /**
  * Given a sorted (increasing order) array with unique integer

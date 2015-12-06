@@ -1,6 +1,6 @@
 package atetc.chap02;
 
-import wzhishen.helpers.LinkedListNode;
+import atetc.helpers.LinkedListNode;
 
 /**
  * Implement an algorithm to find the nth to last element of a singly linked list.

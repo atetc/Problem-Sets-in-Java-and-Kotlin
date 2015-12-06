@@ -1,7 +1,6 @@
 package atetc.chap09;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.println;
 
 /**
  * Given an infinite number of quarters (25 cents), dimes (10

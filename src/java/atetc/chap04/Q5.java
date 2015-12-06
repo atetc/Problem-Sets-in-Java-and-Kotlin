@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import wzhishen.helpers.TreeNode;
+import atetc.helpers.TreeNode;
 
 /**
  * Write an algorithm to find the 'next' node (i.e., in-order successor)

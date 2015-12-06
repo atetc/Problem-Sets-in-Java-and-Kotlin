@@ -1,7 +1,7 @@
 package atetc.chap09;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.*;
+import static atetc.helpers.Printer.println;
 
 /**
  * A child is running up a staircase with n steps, and can

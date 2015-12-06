@@ -5,8 +5,8 @@ package atetc;
  */
 
 import org.junit.Test;
-import wzhishen.chap05.*;
-import wzhishen.helpers.Bit;
+import atetc.chap05.*;
+import atetc.helpers.Bit;
 
 import java.util.ArrayList;
 import java.util.Arrays;

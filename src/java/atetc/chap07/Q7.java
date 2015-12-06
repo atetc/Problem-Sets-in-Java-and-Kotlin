@@ -3,8 +3,7 @@ package atetc.chap07;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.println;
 
 /**
  * Design an algorithm to find the kth number such that the only

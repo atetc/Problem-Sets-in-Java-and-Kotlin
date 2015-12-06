@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.printArray;
+import static atetc.helpers.Printer.printArray;
 
 /**
  * Write a method to sort an array of strings so that all the

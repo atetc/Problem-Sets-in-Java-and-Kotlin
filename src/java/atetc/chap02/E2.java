@@ -1,6 +1,6 @@
 package atetc.chap02;
 
-import wzhishen.helpers.LinkedListNode;
+import atetc.helpers.LinkedListNode;
 
 public class E2 {
 

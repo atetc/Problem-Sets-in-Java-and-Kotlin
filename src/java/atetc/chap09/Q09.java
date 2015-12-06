@@ -2,7 +2,7 @@ package atetc.chap09;
 
 import java.util.ArrayList;
 
-import static wzhishen.helpers.Printer.*;
+import static atetc.helpers.Printer.*;
 
 /**
  * Write an algorithm to print all ways of arranging eight queens

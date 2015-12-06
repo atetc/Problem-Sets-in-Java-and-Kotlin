@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import wzhishen.helpers.TreeNode;
+import atetc.helpers.TreeNode;
 
 /**
  * Design an algorithm and write code to find the first common

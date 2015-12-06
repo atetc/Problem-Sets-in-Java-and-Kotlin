@@ -1,7 +1,7 @@
 package atetc;
 
 import org.junit.Test;
-import wzhishen.matrix.*;
+import atetc.other.matrix.*;
 
 import static org.junit.Assert.assertTrue;
 

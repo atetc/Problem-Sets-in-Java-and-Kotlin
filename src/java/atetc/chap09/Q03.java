@@ -2,8 +2,8 @@ package atetc.chap09;
 
 import java.util.ArrayList;
 
-import static wzhishen.helpers.Printer.*;
-import static wzhishen.helpers.Printer.println;
+import static atetc.helpers.Printer.*;
+import static atetc.helpers.Printer.println;
 
 /**
  * A magic index in an array A[0...n] is defined to be an index

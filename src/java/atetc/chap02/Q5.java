@@ -1,6 +1,6 @@
 package atetc.chap02;
 
-import wzhishen.helpers.LinkedListNode;
+import atetc.helpers.LinkedListNode;
 
 /**
  * Given a circular linked list, implement an algorithm which returns

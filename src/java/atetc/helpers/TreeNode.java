@@ -1,6 +1,6 @@
 package atetc.helpers;
 
-import static wzhishen.helpers.Printer.*;
+import static atetc.helpers.Printer.*;
 
 public class TreeNode {
 

@@ -5,8 +5,8 @@ package atetc;
  */
 
 import org.junit.Test;
-import wzhishen.chap02.*;
-import wzhishen.helpers.LinkedListNode;
+import atetc.chap02.*;
+import atetc.helpers.LinkedListNode;
 
 import static org.junit.Assert.assertTrue;
 

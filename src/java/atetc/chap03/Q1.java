@@ -2,7 +2,7 @@ package atetc.chap03;
 
 import java.util.Arrays;
 
-import static wzhishen.helpers.Printer.*;
+import static atetc.helpers.Printer.*;
 
 /**
  * Describe how you could use a single array to implement three stacks.
