@@ -133,7 +133,7 @@ Output: 2
 [Coverage by tests 7.1 - 7.7](src/test/atetc/TestChap6.java) 
 
 
-#Other
+#Other problems (not from book)
 
 ##Arrays:
 
