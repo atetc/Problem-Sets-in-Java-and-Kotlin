@@ -1,6 +1,6 @@
 package atetc;
 
-import atetc.set24.*;
+import atetc.other.set24.*;
 import atetc.structures.SinglyLinkedList.Node;
 import org.junit.Test;
 

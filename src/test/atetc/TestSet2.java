@@ -1,6 +1,6 @@
 package atetc;
 
-import atetc.set2.*;
+import atetc.other.set2.*;
 import atetc.structures.Tree;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 package atetc;
 
-import atetc.set1.*;
+import atetc.other.set1.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
