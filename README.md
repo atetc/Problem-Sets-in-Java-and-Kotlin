@@ -1,4 +1,4 @@
-# http://www.amazon.com/Cracking-Coding-Interview-Fourth-Edition/dp/145157827X book (solutions in Java with test coverage)
+# http://www.amazon.com/Cracking-Coding-Interview-Fourth-Edition/dp/145157827X book solutions in Java with test coverage.
 
 ##Chapter 1
 
@@ -139,7 +139,7 @@ Output: 2
 
 ###Solutions
 
-[Arrays.1](src/java/atetc/arrays/Q1.java) 
+[Arrays.1](src/java/atetc/other/arrays/Q1.java) 
 
 ###Testing
 
@@ -150,7 +150,7 @@ Output: 2
 
 ###Solutions
 
-[Matrix.1](src/java/atetc/matrix/Q1.java) Given a square matrix of size N×N, calculate the absolute difference between the sums of its diagonals.
+[Matrix.1](src/java/atetc/other/matrix/Q1.java) Given a square matrix of size N×N, calculate the absolute difference between the sums of its diagonals.
 
 ###Testing
 
