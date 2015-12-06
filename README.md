@@ -154,6 +154,17 @@ Output: 2
 
 ###Testing
 
+[Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
+
+##Rectangles:
+
+###Solutions
+
+[Rectangles.1](src/java/atetc/other/rectangles/Q1.java) Get sum of area of two rectilinear rectangles. 
+                                                        If rectangles intersect, the area of their intersection should be counted only once. 
+
+###Testing
+
 [Coverage by tests matrix problems](src/test/atetc/TestMatrix.java) 
 
 
