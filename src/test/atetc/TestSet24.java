@@ -1,5 +1,6 @@
 package atetc;
 
+import atetc.other.linkedlists.Q1;
 import atetc.other.set24.*;
 import atetc.structures.SinglyLinkedList.Node;
 import org.junit.Test;
@@ -13,15 +14,15 @@ public class TestSet24 {
 
     @Test
     public void testGetNumberOfDivisiblePartitions_24_1(){
-        assertTrue(Q1.getNumberOfDivisiblePartitions(0, 0) == 0);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(0, 3) == 0);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(3, 0) == 0);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(3, 3) == 1);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(6, 3) == 1);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(66, 3) == 2);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(2114, 7) == 2);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(214, 7) == 0);
-        assertTrue(Q1.getNumberOfDivisiblePartitions(12123, 3) == 4);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(0, 0) == 0);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(0, 3) == 0);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(3, 0) == 0);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(3, 3) == 1);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(6, 3) == 1);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(66, 3) == 2);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(2114, 7) == 2);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(214, 7) == 0);
+        assertTrue(atetc.other.set24.Q1.getNumberOfDivisiblePartitions(12123, 3) == 4);
     }
 
     @Test
@@ -34,17 +35,7 @@ public class TestSet24 {
         assertTrue(Q2.getNumberOf2s(21).equals(new ArrayList<>(Arrays.asList(2, 12, 20))));
     }
 
-    @Test
-    public void testRemoveHead_24_3(){
-        Node<Integer> head = new Node<>(5);
-        Node<Integer> next = new Node<>(3);
-        head.setNext(next)
-                .setNext(new Node<>(7)
-                .setNext(new Node<>(123)
-                .setNext(new Node<>(4))));
 
-        assertTrue(Q3.removeHead(head) == next);
-    }
 
     @Test
     public void testGetNumberOfDifferentWaysForPurchase_24_4(){

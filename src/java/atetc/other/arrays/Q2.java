@@ -1,9 +1,9 @@
-package atetc.other.set1;
+package atetc.other.arrays;
 
 /**
  * You've got an sorted array of ints 2,2,3,3,4,5,5... Find an element without a pair.
  */
-public class Q1 {
+public class Q2 {
 
     public static Integer findUnpaired(int[] arr) {
         if (arr == null || arr.length == 0) {

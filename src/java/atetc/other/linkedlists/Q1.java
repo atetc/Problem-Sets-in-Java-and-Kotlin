@@ -1,4 +1,4 @@
-package atetc.other.set24;
+package atetc.other.linkedlists;
 
 import atetc.structures.SinglyLinkedList.Node;
 
@@ -14,7 +14,7 @@ import atetc.structures.SinglyLinkedList.Node;
  * }
  *
  */
-public class Q3 {
+public class Q1 {
 
     public static Node<Integer> removeHead(Node<Integer> head) {
         Node<Integer> next = head.getNext();

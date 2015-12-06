@@ -139,7 +139,9 @@ Output: 2
 
 ###Solutions
 
-[Arrays.1](src/java/atetc/other/arrays/Q1.java) 
+[Arrays.1](src/java/atetc/other/arrays/Q1.java)
+ 
+[Arrays.2](src/java/atetc/other/arrays/Q2.java) 
 
 ###Testing
 
@@ -156,6 +158,7 @@ Output: 2
 
 [Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
 
+
 ##Rectangles:
 
 ###Solutions
@@ -165,7 +168,18 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests matrix problems](src/test/atetc/TestMatrix.java) 
+[Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
+
+
+##LinkedLists:
+
+###Solutions
+
+[LinkedLists.1](src/java/atetc/other/linkedlists/Q1.java) 
+
+###Testing
+
+[Coverage by tests matrix problems](src/test/atetc/TestLinkedLists.java)
 
 
 ##Set 1
