@@ -1,6 +1,8 @@
-package atetc.other.set1;
+package atetc.other.arrays;
 
 /**
+ * From set 1
+ *
  * Watson gives Sherlock an array A of length N. Then he asks him to determine if there exists an element in the array such that the sum of the elements on its left is equal to the sum of the elements on its right. If there are no elements to the left/right, then the sum is considered to be zero.
  Formally, find an i, such that, A1+A2...Ai-1 =Ai+1+Ai+2...AN.
 
@@ -31,7 +33,7 @@ package atetc.other.set1;
  For the second test case, A[1]+A[2]=A[4], therefore index 3 satisfies the given conditions.
  */
 
-public class Q2 {
+public class Q3 {
 
     public static boolean isLeftRightArraysSumEqual(int[] arr) {
         if (arr == null || arr.length < 3) {

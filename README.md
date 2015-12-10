@@ -139,9 +139,14 @@ Output: 2
 
 ###Solutions
 
-[Arrays.1](src/java/atetc/other/arrays/Q1.java)
+[Arrays.1](src/java/atetc/other/arrays/Q1.java) You are given an array of integers of size N. Can you find the sum of the elements in the array?
  
-[Arrays.2](src/java/atetc/other/arrays/Q2.java) 
+[Arrays.2](src/java/atetc/other/arrays/Q2.java) You've got an sorted array of ints 2,2,3,3,4,5,5... Find an element without a pair.
+
+[Arrays.3](src/java/atetc/other/arrays/Q3.java) Watson gives Sherlock an array A of length N. Then he asks him to determine if there exists an element in the array such that the sum of the elements on its left is equal to the sum of the elements on its right. If there are no elements to the left/right, then the sum is considered to be zero.
+                                                 Formally, find an i, such that, A1+A2...Ai-1 =Ai+1+Ai+2...AN.
+
+[Arrays.2](src/java/atetc/other/arrays/Q4.java) Given N integers, count the number of pairs of integers whose difference is K.
 
 ###Testing
 
@@ -153,6 +158,17 @@ Output: 2
 ###Solutions
 
 [Matrix.1](src/java/atetc/other/matrix/Q1.java) Given a square matrix of size N×N, calculate the absolute difference between the sums of its diagonals.
+
+###Testing
+
+[Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
+
+
+##Points in 3D:
+
+###Solutions
+
+[PointsIn3D.1](src/java/atetc/other/points3d/Q1.java) 
 
 ###Testing
 
@@ -184,40 +200,7 @@ Output: 2
 
 ##Set 1
 
-[SET 1.1] (src/java/atetc/set1/Q1.java) You've got an array of ints 2,2,3,3,4,5,5... Find an element without a pair.
 
-[SET 1.2] (src/java/atetc/set1/Q2.java) 
-
-                                        Watson gives Sherlock an array A of length N. Then he asks him to determine if there exists an element in the array such that the sum of the elements on its left is equal to the sum of the elements on its right. If there are no elements to the left/right, then the sum is considered to be zero.
-
-                                        Formally, find an i, such that, A1+A2...Ai-1 =Ai+1+Ai+2...AN.
-                                         
-                                         Input Format:
-                                         The first line contains T, the number of test cases. For each test case, the first line contains N, the number of elements in the array A. The second line for each test case contains N space-separated integers, denoting the array A.
-                                         
-                                         Output Format:
-                                         For each test case print YES if there exists an element in the array, such that the sum of the elements on its left is equal to the sum of the elements on its right; otherwise print NO.
-                                         
-                                         Constraints:
-                                         1 ≤ T ≤ 10
-                                         1 ≤N ≤ 10^5
-                                         1 ≤Ai ≤ 2 × 10^4
-                                         1 ≤ i ≤ N
-                                         
-                                         Sample Input:
-                                         2
-                                         3
-                                         1 2 3
-                                         4
-                                         1 2 3 3
-                                         
-                                         Sample Output:
-                                         NO
-                                         YES
-                                         
-                                         Explanation
-                                         For the first test case, no such index exists.
-                                         For the second test case, A[1]+A[2]=A[4], therefore index 3 satisfies the given conditions.
                                          
 [SET 1.3] (src/java/atetc/set1/Q3.java) 
 

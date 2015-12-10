@@ -1,9 +1,10 @@
-package atetc.other.set1;
+package atetc.other.arrays;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * From set 1
  * Given N integers, count the number of pairs of integers whose difference is K.
 
  Input Format
@@ -32,7 +33,7 @@ import java.util.Set;
  There are 3 pairs of integers in the set with a difference of 2.
  */
 
-public class Q3 {
+public class Q4 {
 
     public static Integer getCountOfPairsWithDifference(int[] arr, int diff) {
         if (arr == null || arr.length < 2) {

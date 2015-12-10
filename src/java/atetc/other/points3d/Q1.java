@@ -1,14 +1,16 @@
-package atetc.other.set1;
+package atetc.other.points3d;
 
 import java.util.Random;
 
 /**
+ * From set 1
+ *
  * Place N points in 3d, so that none 3 are on one line.
  * Input: integer N.
  * Output: 3 * N coordinates of points, so that no 3 of the points are on one line.
  */
 
-public class Q4 {
+public class Q1 {
 
     public static int[][] placePointsIn3D(int n) {
         int[][] result = new int[n][3];

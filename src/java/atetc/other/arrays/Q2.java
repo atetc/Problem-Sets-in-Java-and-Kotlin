@@ -1,6 +1,8 @@
 package atetc.other.arrays;
 
 /**
+ * From set 1
+ *
  * You've got an sorted array of ints 2,2,3,3,4,5,5... Find an element without a pair.
  */
 public class Q2 {
