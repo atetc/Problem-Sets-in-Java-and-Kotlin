@@ -26,7 +26,8 @@ public class Tree<T> {
             this.data = data;
         }
 
-        public void addChildren(Node<T> ... nodes) {
+        @SafeVarargs
+        public final void addChildren(Node<T>... nodes) {
             Collections.addAll(children, nodes);
         }
 

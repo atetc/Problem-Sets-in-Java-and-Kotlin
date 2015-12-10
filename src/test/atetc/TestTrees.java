@@ -1,6 +1,6 @@
 package atetc;
 
-import atetc.other.trees.Q1;
+import atetc.other.trees.*;
 import atetc.structures.Tree;
 import org.junit.Test;
 
@@ -30,5 +30,22 @@ public class TestTrees {
         assertTrue(!Q1.isAncestor(node3, node3));
         assertTrue(Q1.isAncestor(node3, node302));
         assertTrue(!Q1.isAncestor(node3, node401));
+    }
+
+    @Test
+    public void test_2(){
+        Tree.Node<Integer> node1 = new Tree.Node<>(1);
+        Tree.Node<Integer> node2 = new Tree.Node<>(2);
+        Tree.Node<Integer> node3 = new Tree.Node<>(3);
+
+        Tree.Node<Integer> node201 = new Tree.Node<>(201);
+        Tree.Node<Integer> node202 = new Tree.Node<>(202);
+
+        Tree<Integer> tree = new Tree<>(0);
+        tree.getRoot().addChildren(node1, node2, node3);
+        node2.addChildren(node201, node202);
+
+        assertTrue(Q2.getNumberOfEvenDistanceUniqueSelections(null) == 0);
+        assertTrue(Q2.getNumberOfEvenDistanceUniqueSelections(tree) == 5);
     }
 }
