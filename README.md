@@ -1,4 +1,4 @@
-# http://www.amazon.com/Cracking-Coding-Interview-Fourth-Edition/dp/145157827X book solutions in Java with test coverage.
+# 1. http://www.amazon.com/Cracking-Coding-Interview-Fourth-Edition/dp/145157827X book solutions in Java with test coverage.
 
 ##Chapter 1
 
@@ -133,7 +133,7 @@ Output: 2
 [Coverage by tests 7.1 - 7.7](src/test/atetc/TestChap6.java) 
 
 
-#Other problems (not from book)
+#2. Other problems (not from book)
 
 ##Arrays:
 
@@ -173,6 +173,18 @@ Output: 2
 ###Testing
 
 [Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
+
+
+##Trees:
+
+###Solutions
+
+[Trees.1](src/java/atetc/other/trees/Q1.java) You've got a tree (structure can be random). 
+                                              For two given nodes you should answer if the first of them is the ancestor of the second.
+
+###Testing
+
+[Coverage by tests matrix problems](src/test/atetc/TestTrees.java)
 
 
 ##Rectangles:
