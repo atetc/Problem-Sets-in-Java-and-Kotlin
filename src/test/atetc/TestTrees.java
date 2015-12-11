@@ -2,6 +2,7 @@ package atetc;
 
 import atetc.other.trees.*;
 import atetc.structures.Tree;
+import atetc.structures.Tree.Node;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -10,14 +11,14 @@ public class TestTrees {
 
     @Test
     public void testIsAncestor_1(){
-        Tree.Node<Integer> node1 = new Tree.Node<>(1);
-        Tree.Node<Integer> node2 = new Tree.Node<>(2);
-        Tree.Node<Integer> node3 = new Tree.Node<>(3);
-        Tree.Node<Integer> node4 = new Tree.Node<>(4);
+        Node<Integer> node1 = new Node<>(1);
+        Node<Integer> node2 = new Node<>(2);
+        Node<Integer> node3 = new Node<>(3);
+        Node<Integer> node4 = new Node<>(4);
 
-        Tree.Node<Integer> node301 = new Tree.Node<>(301);
-        Tree.Node<Integer> node302 = new Tree.Node<>(302);
-        Tree.Node<Integer> node401 = new Tree.Node<>(401);
+        Node<Integer> node301 = new Node<>(301);
+        Node<Integer> node302 = new Node<>(302);
+        Node<Integer> node401 = new Node<>(401);
 
         Tree<Integer> tree = new Tree<>(0);
         tree.getRoot().addChildren(node1, node2, node3, node4);
@@ -34,12 +35,12 @@ public class TestTrees {
 
     @Test
     public void test_2(){
-        Tree.Node<Integer> node1 = new Tree.Node<>(1);
-        Tree.Node<Integer> node2 = new Tree.Node<>(2);
-        Tree.Node<Integer> node3 = new Tree.Node<>(3);
+        Node<Integer> node1 = new Node<>(1);
+        Node<Integer> node2 = new Node<>(2);
+        Node<Integer> node3 = new Node<>(3);
 
-        Tree.Node<Integer> node201 = new Tree.Node<>(201);
-        Tree.Node<Integer> node202 = new Tree.Node<>(202);
+        Node<Integer> node201 = new Node<>(201);
+        Node<Integer> node202 = new Node<>(202);
 
         Tree<Integer> tree = new Tree<>(0);
         tree.getRoot().addChildren(node1, node2, node3);

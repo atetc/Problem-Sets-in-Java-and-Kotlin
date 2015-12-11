@@ -1,5 +1,7 @@
 package atetc.other.trees.binary;
 
+import atetc.structures.BinaryTree;
+
 /**
  * From Akvelon set 26
  *
@@ -16,4 +18,19 @@ package atetc.other.trees.binary;
  */
 public class Q1 {
 
+    public static BinaryTree getBinaryTreeFromInwardSpiralArray(int[] array) {
+        if (array == null || array.length == 0) {
+            return null;
+        }
+
+        if (array.length == 1) {
+            return new BinaryTree<>(array[0]);
+        }
+
+        for (int i : array) {
+
+        }
+
+        return null;
+    }
 }

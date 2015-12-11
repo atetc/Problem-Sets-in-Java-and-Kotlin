@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import atetc.helpers.TreeNode;
+import atetc.helpers.BinaryTreeNode;
 
 /**
  * You have two very large binary trees: Tl, with millions of
@@ -12,7 +12,7 @@ import atetc.helpers.TreeNode;
  */
 public class Q7 {
 
-    public static boolean isSubtree(TreeNode t1, TreeNode t2) {
+    public static boolean isSubtree(BinaryTreeNode t1, BinaryTreeNode t2) {
         if (t2 == null) {
             return true;
         }
@@ -28,7 +28,7 @@ public class Q7 {
         return isSubtree(t1.left, t2) || isSubtree(t1.right, t2);
     }
 
-    private static boolean isEqual(TreeNode n1, TreeNode n2) {
+    private static boolean isEqual(BinaryTreeNode n1, BinaryTreeNode n2) {
         if (n1 == null && n2 == null) {
             return true;
         }

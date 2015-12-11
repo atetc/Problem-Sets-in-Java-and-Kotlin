@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import atetc.helpers.TreeNode;
+import atetc.helpers.BinaryTreeNode;
 
 /**
  * Implement a function to check if a binary tree is balanced.
@@ -10,7 +10,7 @@ import atetc.helpers.TreeNode;
  */
 public class Q1 {
 
-    public static boolean isBalanced(TreeNode n) {
+    public static boolean isBalanced(BinaryTreeNode n) {
         if (n == null) {
             return true;
         }
@@ -20,7 +20,7 @@ public class Q1 {
                isBalanced(n.right);
     }
 
-    public static boolean isBalanced2(TreeNode n) {
+    public static boolean isBalanced2(BinaryTreeNode n) {
         if (n == null) return true;
         if (Math.abs(getHeight(n.left) - getHeight(n.right)) > 1) {
             return false;
@@ -33,11 +33,11 @@ public class Q1 {
         return true;
     }
 
-    public static boolean isBalanced3(TreeNode n) {
+    public static boolean isBalanced3(BinaryTreeNode n) {
         return getHeightBalanced(n) != -1;
     }
 
-    private static int getHeight(TreeNode n) {
+    private static int getHeight(BinaryTreeNode n) {
         if (n == null) {
             return 0;
         }
@@ -45,7 +45,7 @@ public class Q1 {
         return 1 + Math.max(getHeight(n.left), getHeight(n.right));
     }
 
-    private static int getHeightBalanced(TreeNode n) {
+    private static int getHeightBalanced(BinaryTreeNode n) {
         if (n == null) return 0;
         int leftHeight = getHeightBalanced(n.left);
         int rightHeight = getHeightBalanced(n.right);

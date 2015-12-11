@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import atetc.helpers.TreeNode;
+import atetc.helpers.BinaryTreeNode;
 
 /**
  * Write an algorithm to find the 'next' node (i.e., in-order successor)
@@ -10,7 +10,7 @@ import atetc.helpers.TreeNode;
 
 public class Q5 {
 
-    public static TreeNode inorderSuccessor(TreeNode n) {
+    public static BinaryTreeNode inorderSuccessor(BinaryTreeNode n) {
         if (n == null) {
             return null;
         }
@@ -36,7 +36,7 @@ public class Q5 {
         return n.parent;
     }
 
-    private static TreeNode leftmostChild(TreeNode n) {
+    private static BinaryTreeNode leftmostChild(BinaryTreeNode n) {
         if (n.left == null) {
             return n;
         } else {
@@ -44,7 +44,7 @@ public class Q5 {
         }
     }
 
-    public static TreeNode preorderSuccessor(TreeNode n) {
+    public static BinaryTreeNode preorderSuccessor(BinaryTreeNode n) {
         if (n == null) return null;
 
         // case 1: n has a child ->
@@ -63,7 +63,7 @@ public class Q5 {
         return n.parent.right;
     }
 
-    public static TreeNode postorderSuccessor(TreeNode n) {
+    public static BinaryTreeNode postorderSuccessor(BinaryTreeNode n) {
         // case 1: n is the last node in traversal ->
         //         return root's parent, ie., null
         if (n == null || n.parent == null) return null;
@@ -78,7 +78,7 @@ public class Q5 {
         return leftmostBottomChild(n.parent.right);
     }
 
-    private static TreeNode leftmostBottomChild(TreeNode n) {
+    private static BinaryTreeNode leftmostBottomChild(BinaryTreeNode n) {
         if (n.left == null && n.right == null) return n;
         if (n.left != null) {
             return leftmostBottomChild(n.left);

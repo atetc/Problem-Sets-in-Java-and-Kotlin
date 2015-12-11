@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import atetc.helpers.TreeNode;
+import atetc.helpers.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -10,22 +10,22 @@ import java.util.LinkedList;
  */
 public class Q4 {
 
-    public static ArrayList<LinkedList<TreeNode>> findLevelLinkList(TreeNode root) {
+    public static ArrayList<LinkedList<BinaryTreeNode>> findLevelLinkList(BinaryTreeNode root) {
         if (root == null) {
             return null;
         }
 
-        ArrayList<LinkedList<TreeNode>> result = new ArrayList<>();
+        ArrayList<LinkedList<BinaryTreeNode>> result = new ArrayList<>();
         int level = 0;
 
-        LinkedList<TreeNode> list = new LinkedList<>();
+        LinkedList<BinaryTreeNode> list = new LinkedList<>();
         list.add(root);
 
         while (list.size() > 0) {
             result.add(level, list);
             list = new LinkedList<>();
             for (int i = 0; i < result.get(level).size(); i++){
-                TreeNode node = result.get(level).get(i);
+                BinaryTreeNode node = result.get(level).get(i);
                 if (node != null) {
                     if (node.left != null) {
                         list.add(node.left);

@@ -1,14 +1,10 @@
 package atetc;
 
-/**
- * Created by Atetc on 19.11.2015.
- */
-
 import org.junit.Test;
 import atetc.chap04.*;
 import atetc.helpers.DGraph;
 import atetc.helpers.GraphNode;
-import atetc.helpers.TreeNode;
+import atetc.helpers.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -27,12 +23,12 @@ public class TestChap4 {
          *  / \
          * 2   3
          */
-        TreeNode r = new TreeNode(4);
-        r.right = new TreeNode(5);
-        r.left = new TreeNode(1);
+        BinaryTreeNode r = new BinaryTreeNode(4);
+        r.right = new BinaryTreeNode(5);
+        r.left = new BinaryTreeNode(1);
 
-        r.left.left = new TreeNode(2);
-        r.left.right = new TreeNode(3);
+        r.left.left = new BinaryTreeNode(2);
+        r.left.right = new BinaryTreeNode(3);
 
         /*
          *     4
@@ -48,7 +44,7 @@ public class TestChap4 {
         assertTrue(Q1.isBalanced2(r));
         assertTrue(Q1.isBalanced3(r));
 
-        r.left.right.right = new TreeNode(6);
+        r.left.right.right = new BinaryTreeNode(6);
         assertTrue(!Q1.isBalanced(r));
         assertTrue(!Q1.isBalanced2(r));
         assertTrue(!Q1.isBalanced3(r));
@@ -104,48 +100,48 @@ public class TestChap4 {
     public void testSortedArrayToMinimalBST_4_3(){
         assertTrue(Q3.createBST(new int[] {}) == null);
 
-        TreeNode treeNode = new TreeNode(0);
+        BinaryTreeNode treeNode = new BinaryTreeNode(0);
         assertTrue(treeNode.equals(Q3.createBST(new int[]{0})));
 
-        treeNode = new TreeNode(0);
-        treeNode.right = new TreeNode(1);
+        treeNode = new BinaryTreeNode(0);
+        treeNode.right = new BinaryTreeNode(1);
         assertTrue(treeNode.equals(Q3.createBST(new int[]{0, 1})));
 
-        treeNode = new TreeNode(1);
-        treeNode.left = new TreeNode(0);
-        treeNode.right = new TreeNode(5);
+        treeNode = new BinaryTreeNode(1);
+        treeNode.left = new BinaryTreeNode(0);
+        treeNode.right = new BinaryTreeNode(5);
         assertTrue(treeNode.equals(Q3.createBST(new int[]{0, 1, 5})));
 
-        treeNode = new TreeNode(1);
-        treeNode.left = new TreeNode(0);
-        treeNode.right = new TreeNode(5);
-        treeNode.right.right = new TreeNode(6);
+        treeNode = new BinaryTreeNode(1);
+        treeNode.left = new BinaryTreeNode(0);
+        treeNode.right = new BinaryTreeNode(5);
+        treeNode.right.right = new BinaryTreeNode(6);
         assertTrue(treeNode.equals(Q3.createBST(new int[]{0, 1, 5, 6})));
 
-        treeNode = new TreeNode(5);
-        treeNode.left = new TreeNode(0);
-        treeNode.right = new TreeNode(6);
-        treeNode.right.right = new TreeNode(10);
-        treeNode.left.right = new TreeNode(1);
+        treeNode = new BinaryTreeNode(5);
+        treeNode.left = new BinaryTreeNode(0);
+        treeNode.right = new BinaryTreeNode(6);
+        treeNode.right.right = new BinaryTreeNode(10);
+        treeNode.left.right = new BinaryTreeNode(1);
         assertTrue(treeNode.equals(Q3.createBST(new int[]{0, 1, 5, 6, 10})));
     }
 
     @Test
     public void testBSTToLinkedList_4_4(){
-        TreeNode root = new TreeNode(5, new TreeNode(0), new TreeNode(6));
+        BinaryTreeNode root = new BinaryTreeNode(5, new BinaryTreeNode(0), new BinaryTreeNode(6));
 
-        LinkedList<TreeNode> list1 = new LinkedList<>();
+        LinkedList<BinaryTreeNode> list1 = new LinkedList<>();
         list1.add(root);
 
-        LinkedList<TreeNode> list2 = new LinkedList<>();
+        LinkedList<BinaryTreeNode> list2 = new LinkedList<>();
         list2.add(root.left);
         list2.add(root.right);
 
-        List<LinkedList<TreeNode>> lists = new ArrayList<>();
+        List<LinkedList<BinaryTreeNode>> lists = new ArrayList<>();
         lists.add(0, list1);
         lists.add(1, list2);
 
-        ArrayList<LinkedList<TreeNode>> linkedLists = Q4.findLevelLinkList(root);
+        ArrayList<LinkedList<BinaryTreeNode>> linkedLists = Q4.findLevelLinkList(root);
         assertTrue(linkedLists.equals(lists));
     }
 
@@ -159,13 +155,13 @@ public class TestChap4 {
          * 1   3
          *
          */
-        TreeNode root = new TreeNode(4);
+        BinaryTreeNode root = new BinaryTreeNode(4);
 
-        TreeNode n2 = new TreeNode(2), n5 = new TreeNode(5);
+        BinaryTreeNode n2 = new BinaryTreeNode(2), n5 = new BinaryTreeNode(5);
         n2.parent = root; n5.parent = root;
         root.left = n2; root.right = n5;
 
-        TreeNode n1 = new TreeNode(1), n3 = new TreeNode(3);
+        BinaryTreeNode n1 = new BinaryTreeNode(1), n3 = new BinaryTreeNode(3);
         n1.parent = n2; n3.parent = n2;
         n2.left = n1; n2.right = n3;
 
@@ -184,9 +180,9 @@ public class TestChap4 {
          *   6
          *
          */
-        TreeNode root = new TreeNode(4);
+        BinaryTreeNode root = new BinaryTreeNode(4);
 
-        TreeNode n1 = new TreeNode(1), n2 = new TreeNode(2), n3 = new TreeNode(3), n5 = new TreeNode(5), n6 = new TreeNode(6), n7 = new TreeNode(7);
+        BinaryTreeNode n1 = new BinaryTreeNode(1), n2 = new BinaryTreeNode(2), n3 = new BinaryTreeNode(3), n5 = new BinaryTreeNode(5), n6 = new BinaryTreeNode(6), n7 = new BinaryTreeNode(7);
         n2.left = n1; n2.right = n3; root.left = n2; root.right = n5; n3.left = n6;
         n5.right = n7;
 
@@ -207,11 +203,11 @@ public class TestChap4 {
          *
          */
 
-        TreeNode root = new TreeNode(4);
+        BinaryTreeNode root = new BinaryTreeNode(4);
 
-        TreeNode n1 = new TreeNode(1), n2 = new TreeNode(2), n3 = new TreeNode(3),
-                n5 = new TreeNode(5), n6 = new TreeNode(6),
-                n7 = new TreeNode(7);
+        BinaryTreeNode n1 = new BinaryTreeNode(1), n2 = new BinaryTreeNode(2), n3 = new BinaryTreeNode(3),
+                n5 = new BinaryTreeNode(5), n6 = new BinaryTreeNode(6),
+                n7 = new BinaryTreeNode(7);
         n2.left = n1; n2.right = n3; root.left = n2; root.right = n5; n3.left = n6;
         n5.right = n7;
 
@@ -234,14 +230,14 @@ public class TestChap4 {
          *  8 6  9
          *
          */
-        TreeNode n1 = new TreeNode(1), n2 = new TreeNode(2), n3 = new TreeNode(3),
-                root = new TreeNode(4), n5 = new TreeNode(5), n6 = new TreeNode(6),
-                n7 = new TreeNode(7), n8 = new TreeNode(8), n9 = new TreeNode(9);
+        BinaryTreeNode n1 = new BinaryTreeNode(1), n2 = new BinaryTreeNode(2), n3 = new BinaryTreeNode(3),
+                root = new BinaryTreeNode(4), n5 = new BinaryTreeNode(5), n6 = new BinaryTreeNode(6),
+                n7 = new BinaryTreeNode(7), n8 = new BinaryTreeNode(8), n9 = new BinaryTreeNode(9);
 
         root.left = n5; root.right = n2; n5.left = n1; n5.right = n3; n1.right = n8;
         n3.left = n6; n2.right = n7; n7.left = n9;
 
-        LinkedList<LinkedList<TreeNode>> lists = new LinkedList<>();
+        LinkedList<LinkedList<BinaryTreeNode>> lists = new LinkedList<>();
         lists.add(new LinkedList<>());
         lists.get(0).add(n5);
 

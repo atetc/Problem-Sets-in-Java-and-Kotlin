@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import atetc.helpers.TreeNode;
+import atetc.helpers.BinaryTreeNode;
 
 /**
  * Design an algorithm and write code to find the first common
@@ -10,7 +10,7 @@ import atetc.helpers.TreeNode;
  */
 public class Q6 {
 
-    public static TreeNode findFirstCommonAncestor(TreeNode root, TreeNode n1, TreeNode n2) {
+    public static BinaryTreeNode findFirstCommonAncestor(BinaryTreeNode root, BinaryTreeNode n1, BinaryTreeNode n2) {
         if (root == null) {
             return null;
         }
@@ -34,7 +34,7 @@ public class Q6 {
         }
     }
 
-    private static boolean contains(TreeNode root, TreeNode n) {
+    private static boolean contains(BinaryTreeNode root, BinaryTreeNode n) {
         if (root == null) {
             return false;
         }

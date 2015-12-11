@@ -2,18 +2,18 @@ package atetc.helpers;
 
 import static atetc.helpers.Printer.*;
 
-public class TreeNode {
+public class BinaryTreeNode {
 
     public int value;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode parent; /* only used for certain cases */
+    public BinaryTreeNode left;
+    public BinaryTreeNode right;
+    public BinaryTreeNode parent; /* only used for certain cases */
 
-    public TreeNode(int x) {
+    public BinaryTreeNode(int x) {
         value = x;
     }
 
-    public TreeNode(int value, TreeNode left, TreeNode right) {
+    public BinaryTreeNode(int value, BinaryTreeNode left, BinaryTreeNode right) {
         this.value = value;
         this.left = left;
         this.right = right;
@@ -25,14 +25,14 @@ public class TreeNode {
         return leftValue + " / "+ String.valueOf(value) + " \\ " + rightValue;
     }
 
-    public static void printTree(TreeNode n) {
+    public static void printTree(BinaryTreeNode n) {
         if (n == null) return;
         println(n.value);
         printTree(n.left, 0, true);
         printTree(n.right, 0, false);
     }
 
-    private static void printTree(TreeNode n, int level, boolean isLeft) {
+    private static void printTree(BinaryTreeNode n, int level, boolean isLeft) {
         if (n == null) return;
         for (int i = 0; i < level; ++i) print("  ");
         if (isLeft)
@@ -57,17 +57,17 @@ public class TreeNode {
             return false;
         }
 
-        TreeNode node1 = this;
-        TreeNode node2 = (TreeNode) obj;
+        BinaryTreeNode node1 = this;
+        BinaryTreeNode node2 = (BinaryTreeNode) obj;
 
         if (node1.value != node2.value) {
             return false;
         }
 
-        TreeNode leftNode1 = node1.left;
-        TreeNode leftNode2 = node2.left;
-        TreeNode rightNode1 = node1.right;
-        TreeNode rightNode2 = node2.right;
+        BinaryTreeNode leftNode1 = node1.left;
+        BinaryTreeNode leftNode2 = node2.left;
+        BinaryTreeNode rightNode1 = node1.right;
+        BinaryTreeNode rightNode2 = node2.right;
 
         if (leftNode1 == null) {
             return leftNode2 == null && isEqual(rightNode1, rightNode2);
@@ -76,7 +76,7 @@ public class TreeNode {
         }
     }
 
-    private boolean isEqual(TreeNode rightNode1, TreeNode rightNode2) {
+    private boolean isEqual(BinaryTreeNode rightNode1, BinaryTreeNode rightNode2) {
         if (rightNode1 == null) {
             return rightNode2 == null;
         } else {

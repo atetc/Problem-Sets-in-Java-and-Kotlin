@@ -1,6 +1,6 @@
 package atetc.chap04;
 
-import atetc.helpers.TreeNode;
+import atetc.helpers.BinaryTreeNode;
 
 import java.util.LinkedList;
 
@@ -11,15 +11,15 @@ import java.util.LinkedList;
  */
 public class Q8 {
 
-    public static LinkedList<LinkedList<TreeNode>> findSumPaths(TreeNode root, int target) {
-        LinkedList<LinkedList<TreeNode>> result = new LinkedList<>();
-        LinkedList<TreeNode> path = new LinkedList<>();
+    public static LinkedList<LinkedList<BinaryTreeNode>> findSumPaths(BinaryTreeNode root, int target) {
+        LinkedList<LinkedList<BinaryTreeNode>> result = new LinkedList<>();
+        LinkedList<BinaryTreeNode> path = new LinkedList<>();
         findSumPaths(root, target, path, result);
         return result;
     }
 
     @SuppressWarnings("unchecked")
-    private static void findSumPaths(TreeNode n, int target, LinkedList<TreeNode> path, LinkedList<LinkedList<TreeNode>> result) {
+    private static void findSumPaths(BinaryTreeNode n, int target, LinkedList<BinaryTreeNode> path, LinkedList<LinkedList<BinaryTreeNode>> result) {
         if (n == null) {
             return;
         }
@@ -27,13 +27,13 @@ public class Q8 {
         path.add(n);
 
         int sum = 0;
-        LinkedList<TreeNode> nodes = new LinkedList<>();
+        LinkedList<BinaryTreeNode> nodes = new LinkedList<>();
         for (int i = path.size() - 1; i >= 0; --i) {
-            TreeNode node = path.get(i);
+            BinaryTreeNode node = path.get(i);
             nodes.add(node);
             sum += node.value;
             if (sum == target) {
-                result.add((LinkedList<TreeNode>) nodes.clone());
+                result.add((LinkedList<BinaryTreeNode>) nodes.clone());
             }
         }
 
