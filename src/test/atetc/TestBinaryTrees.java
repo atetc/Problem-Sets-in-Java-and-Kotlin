@@ -44,5 +44,18 @@ public class TestBinaryTrees {
         assertTrue(Q2.getBSTFromSortedArray(new int[]{}) == null);
         assertTrue(Q2.getBSTFromSortedArray(new int[]{1}).equals(new BinaryTree<>(1)));
         assertTrue(Q2.getBSTFromSortedArray(new int[]{1, 2, 3}).equals(tree));
+
+        root.getRight().setRight(new Node<>(4));
+        assertTrue(Q2.getBSTFromSortedArray(new int[]{1, 2, 3, 4}).equals(tree));
+
+        root.setLeft(new Node<>(0));
+        root.getLeft().setRight(new Node<>(1));
+        root.getLeft().setLeft(null);
+
+        root.setRight(new Node<>(4));
+        root.getRight().setLeft(new Node<>(3));
+        root.getRight().setRight(new Node<>(5));
+
+        assertTrue(Q2.getBSTFromSortedArray(new int[]{0, 1, 2, 3, 4, 5}).equals(tree));
     }
 }

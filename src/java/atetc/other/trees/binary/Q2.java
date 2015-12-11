@@ -1,6 +1,7 @@
 package atetc.other.trees.binary;
 
 import atetc.structures.BinaryTree;
+import atetc.structures.BinaryTree.Node;
 
 /**
  * From Akvelon set 26
@@ -9,16 +10,25 @@ import atetc.structures.BinaryTree;
  */
 public class Q2 {
 
-
-    public static BinaryTree getBSTFromSortedArray(int[] array) {
-        if (array == null || array.length == 0) {
+    public static BinaryTree<Integer> getBSTFromSortedArray(int[] arr) {
+        if (arr == null || arr.length == 0) {
             return null;
         }
 
-        if (array.length == 1) {
-            return new BinaryTree<>(array[0]);
+        return new BinaryTree<>(buildBST(arr, 0, arr.length - 1));
+    }
+
+    private static Node<Integer> buildBST(int[] arr, int start, int end) {
+        if (start > end) {
+            return null;
         }
 
-        return null;
+        int mid = (start + end) / 2;
+
+        Node<Integer> node = new Node<>(arr[mid]);
+        node.setLeft(buildBST(arr, start, mid - 1));
+        node.setRight(buildBST(arr, mid + 1, end));
+
+        return node;
     }
 }

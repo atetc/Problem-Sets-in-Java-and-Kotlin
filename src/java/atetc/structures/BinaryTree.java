@@ -4,11 +4,19 @@ public class BinaryTree<T> {
     private Node<T> root;
 
     public BinaryTree(T rootData) {
-        root = new Node<T>(rootData);
+        root = new Node<>(rootData);
+    }
+
+    public BinaryTree(Node<T> root) {
+        this.root = root;
     }
 
     public Node<T> getRoot() {
         return root;
+    }
+
+    public void setRoot(Node<T> root) {
+        this.root = root;
     }
 
     @Override
@@ -70,12 +78,12 @@ public class BinaryTree<T> {
             return left;
         }
 
-        public void setLeft(Node<T> left) {
-            this.left = left;
-        }
-
         public Node<T> getRight() {
             return right;
+        }
+
+        public void setLeft(Node<T> left) {
+            this.left = left;
         }
 
         public void setRight(Node<T> right) {
