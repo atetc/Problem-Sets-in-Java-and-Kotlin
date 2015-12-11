@@ -183,22 +183,14 @@ Output: 2
                                               For two given nodes you should answer if the first of them is the ancestor of the second.
 
 [BinaryTrees.1](src/java/atetc/other/trees/binary/Q1.java) Given a binary tree print it in inward spiral order i.e first print level 1, then level n, then level 2, then n-1 and so on.
-                                                           For Ex:
-                                                           1
-                                                           2 3
-                                                           4 5 6 7
-                                                           8 9 10 11 12 13 14 15
-                                                           
-                                                           Print- 1 15 14 13 12 11 10 9 8 2 3 7 6 5 4
-                                                           
-                                                           Extend the algorithm to n-ary tree.
+                                                           Build tree from this print.
  
 [BinaryTrees.2](src/java/atetc/other/trees/binary/Q2.java) Please build BST from sorted array of integers.
 
-
 ###Testing
 
-[Coverage by tests matrix problems](src/test/atetc/TestTrees.java)
+[Coverage by tests trees problems](src/test/atetc/TestTrees.java)
+[Coverage by tests binary trees problems](src/test/atetc/TestBinaryTrees.java)
 
 
 ##Rectangles:
@@ -223,47 +215,6 @@ Output: 2
 
 [Coverage by tests matrix problems](src/test/atetc/TestLinkedLists.java)
 
-
-##Set 1
-
-
-                                         
-[SET 1.3] (src/java/atetc/set1/Q3.java) 
-
-                                         Given N integers, count the number of pairs of integers whose difference is K.
-                                        
-                                         Input Format
-                                        
-                                         The first line contains N and K.
-                                         The second line contains N numbers of the set. All the N numbers are unique.
-                                        
-                                         Output Format
-                                        
-                                         An integer that tells the number of pairs of integers whose difference is K.
-                                        
-                                         Constraints:
-                                         N ≤ 10^5
-                                         0< K <10^9
-                                         Each integer will be greater than 0 and at least K smaller than 231−1.
-                                        
-                                         Sample Input
-                                        
-                                         5 2
-                                         1 5 3 4 2
-                                         Sample Output
-                                        
-                                         3
-                                         Explanation
-                                        
-                                         There are 3 pairs of integers in the set with a difference of 2.
-                                        
-[SET 1.4] (src/java/atetc/set1/Q4.java) Place N points in 3d, so that none 3 are on one line.
-                                        Input: integer N.
-                                        Output: 3 * N coordinates of points, so that no 3 of the points are on one line.
-
-###Testing
-
-[Coverage by tests 1.1 - 1.4](src/test/atetc/TestSet1.java)
 
 ##Set 2
 
@@ -294,8 +245,6 @@ Output: 2
                                         In the second example, doubling the number is unnecessary, so we need to push the blue button nine times.
 
 [SET 2.2] (src/java/atetc/set2/Q2.java) You've got an array of ints (array is NOT sorted). Find two elements without a pair.
-
-[SET 2.3] (src/java/atetc/set2/Q3.java) You've got an array of ints (array is NOT sorted). Find two elements without a pair.
 
 ###Testing
 

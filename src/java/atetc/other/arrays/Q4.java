@@ -4,7 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * From set 1
+ * From Akvelon Set 1
+ *
  * Given N integers, count the number of pairs of integers whose difference is K.
 
  Input Format
