@@ -26,7 +26,6 @@ public class Q1 {
 
         int[][] result = new int[n][];
 
-        // first walking from 0 level
         int level = 0;
         int counter = 0;
         while (level < n) {
