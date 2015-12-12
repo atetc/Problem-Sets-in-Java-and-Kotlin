@@ -25,31 +25,36 @@ public class Q1 {
         }
 
         int[][] result = new int[n][];
-        result[0] = new int[]{arr[0]};
 
+        // first walking from 0 level
         int level = 0;
-        int topCounter = 0;
-        int bottomCounter = 0;
-        boolean forward = true;
+        int counter = 0;
+        while (level < n) {
+            int levelLength = (int) Math.pow(2, level);
+            int nextLevelLength = (int) Math.pow(2, n - level - 1);
 
-        while (level < n && topCounter < arr.length) {
-            int topLevelSize = (int) Math.pow(2, level);
-            int bottomLevelSize = (int) Math.pow(2, n - level);
-
-            if (forward) {
-                result[level] = Arrays.copyOfRange(arr, topCounter, topLevelSize);
+            if (counter < arr.length) {
+                result[level] = Arrays.copyOfRange(arr, counter, counter + levelLength);
             } else {
-                result[level] = Arrays.copyOfRange(arr, bottomCounter, bottomLevelSize);
-                Collections.reverse(Arrays.asList(result[level]));
+                int start = arr.length - (counter - arr.length) - levelLength;
+                int end = arr.length - (counter - arr.length);
+                result[level] = reverse(Arrays.copyOfRange(arr, start, end));
             }
 
-            topCounter += topLevelSize;
-            bottomCounter += bottomLevelSize;
-
-            forward = !forward;
+            counter += levelLength + nextLevelLength;
             level++;
         }
 
         return result;
+    }
+
+    private static int[] reverse(int[] arr) {
+        for (int i = 0; i < arr.length / 2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+
+        return arr;
     }
 }
