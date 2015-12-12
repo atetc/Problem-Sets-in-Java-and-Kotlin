@@ -135,6 +135,17 @@ Output: 2
 
 #2. Other problems (not from book)
 
+##Strings:
+
+###Solutions
+
+[Strings.1](src/java/atetc/other/strings/Q1.java) 
+ 
+###Testing
+
+[Coverage by tests stringss problems](src/test/atetc/TestStrings.java) 
+
+
 ##Arrays:
 
 ###Solutions
