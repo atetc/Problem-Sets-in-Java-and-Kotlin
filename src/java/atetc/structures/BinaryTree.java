@@ -1,7 +1,7 @@
 package atetc.structures;
 
 public class BinaryTree<T> {
-    private Node<T> root;
+    public Node<T> root;
 
     public BinaryTree(T rootData) {
         root = new Node<>(rootData);
@@ -11,12 +11,8 @@ public class BinaryTree<T> {
         this.root = root;
     }
 
-    public Node<T> getRoot() {
-        return root;
-    }
+    public BinaryTree() {
 
-    public void setRoot(Node<T> root) {
-        this.root = root;
     }
 
     @Override
@@ -33,8 +29,8 @@ public class BinaryTree<T> {
             return false;
         }
 
-        Node node1 = this.getRoot();
-        Node node2 = ((BinaryTree) obj).getRoot();
+        Node node1 = this.root;
+        Node node2 = ((BinaryTree) obj).root;
 
         if (node1.data != node2.data) {
             return false;
@@ -62,8 +58,8 @@ public class BinaryTree<T> {
 
     public static class Node<T> {
         private T data;
-        private Node<T> left;
-        private Node<T> right;
+        public Node<T> left;
+        public Node<T> right;
 
         public Node(T data) {
             this.data = data;
@@ -72,22 +68,6 @@ public class BinaryTree<T> {
         public void setChild(T left, T right) {
             this.left = new Node<>(left);
             this.right = new Node<>(right);
-        }
-
-        public Node<T> getLeft() {
-            return left;
-        }
-
-        public Node<T> getRight() {
-            return right;
-        }
-
-        public void setLeft(Node<T> left) {
-            this.left = left;
-        }
-
-        public void setRight(Node<T> right) {
-            this.right = right;
         }
 
         @Override

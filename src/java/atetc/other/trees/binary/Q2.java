@@ -26,8 +26,8 @@ public class Q2 {
         int mid = (start + end) / 2;
 
         Node<Integer> node = new Node<>(arr[mid]);
-        node.setLeft(buildBST(arr, start, mid - 1));
-        node.setRight(buildBST(arr, mid + 1, end));
+        node.left = buildBST(arr, start, mid - 1);
+        node.right = buildBST(arr, mid + 1, end);
 
         return node;
     }

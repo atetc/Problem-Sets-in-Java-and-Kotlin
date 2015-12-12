@@ -1,6 +1,7 @@
 package atetc.other.trees.binary;
 
-import atetc.structures.BinaryTree;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * From Akvelon set 26
@@ -18,19 +19,37 @@ import atetc.structures.BinaryTree;
  */
 public class Q1 {
 
-    public static BinaryTree getBinaryTreeFromInwardSpiralArray(int[] array) {
-        if (array == null || array.length == 0) {
+    public static int[][] printTreeFromSpiralArray(int[] arr, int n) {
+        if (n == 0) {
             return null;
         }
 
-        if (array.length == 1) {
-            return new BinaryTree<>(array[0]);
+        int[][] result = new int[n][];
+        result[0] = new int[]{arr[0]};
+
+        int level = 0;
+        int topCounter = 0;
+        int bottomCounter = 0;
+        boolean forward = true;
+
+        while (level < n && topCounter < arr.length) {
+            int topLevelSize = (int) Math.pow(2, level);
+            int bottomLevelSize = (int) Math.pow(2, n - level);
+
+            if (forward) {
+                result[level] = Arrays.copyOfRange(arr, topCounter, topLevelSize);
+            } else {
+                result[level] = Arrays.copyOfRange(arr, bottomCounter, bottomLevelSize);
+                Collections.reverse(Arrays.asList(result[level]));
+            }
+
+            topCounter += topLevelSize;
+            bottomCounter += bottomLevelSize;
+
+            forward = !forward;
+            level++;
         }
 
-        for (int i : array) {
-
-        }
-
-        return null;
+        return result;
     }
 }

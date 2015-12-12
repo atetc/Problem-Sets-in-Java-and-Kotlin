@@ -182,14 +182,22 @@ Output: 2
 [Trees.1](src/java/atetc/other/trees/Q1.java) You've got a tree (structure can be random). 
                                               For two given nodes you should answer if the first of them is the ancestor of the second.
 
+###Testing
+
+[Coverage by tests trees problems](src/test/atetc/TestTrees.java) 
+                                             
+                                              
+##Binary Trees:
+
+###Solutions
+
 [BinaryTrees.1](src/java/atetc/other/trees/binary/Q1.java) Given a binary tree print it in inward spiral order i.e first print level 1, then level n, then level 2, then n-1 and so on.
                                                            Build tree from this print.
- 
+
 [BinaryTrees.2](src/java/atetc/other/trees/binary/Q2.java) Please build BST from sorted array of integers.
 
 ###Testing
 
-[Coverage by tests trees problems](src/test/atetc/TestTrees.java)
 [Coverage by tests binary trees problems](src/test/atetc/TestBinaryTrees.java)
 
 
