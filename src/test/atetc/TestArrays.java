@@ -1,10 +1,10 @@
 package atetc;
 
-import atetc.other.arrays.Q2;
-import atetc.other.arrays.Q4;
+import atetc.other.arrays.*;
+import org.junit.Assert;
 import org.junit.Test;
-import atetc.other.arrays.Q1;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 
 public class TestArrays {
@@ -66,13 +66,15 @@ public class TestArrays {
     }
 
     @Test
-    public void testFindUnpaired_5(){
-        assertTrue(Q2.findUnpaired(null) == null);
+    public void testBuildPairs_5(){
+        int[] x = new int[]{1, 2};
+        int[] y = new int[]{1, 2};
 
-        int[] arr = new int[]{1};
-        assertTrue(Q2.findUnpaired(arr) == 1);
+        assertArrayEquals(Q5.buildPairs(x, y), new int[]{0});
 
-        arr = new int[]{1, 1, 2, 2, 3, 3, 5, 66, 66};
-        assertTrue(Q2.findUnpaired(arr) == 5);
+        x = new int[]{1, 2};
+        y = new int[]{1, 2};
+
+        assertArrayEquals(Q5.buildPairs(x, y), new int[]{1, 0});
     }
 }

@@ -7,4 +7,7 @@ package atetc.other.arrays;
  */
 public class Q5 {
 
+    public static int[] buildPairs(int[] x, int[] y) {
+        return new int[]{0};
+    }
 }
