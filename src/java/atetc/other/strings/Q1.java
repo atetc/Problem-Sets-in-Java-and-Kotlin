@@ -1,5 +1,9 @@
 package atetc.other.strings;
 
+import java.awt.*;
+import java.util.*;
+import java.util.List;
+
 /**
  * From Akvelon set 26
  *
@@ -24,4 +28,44 @@ package atetc.other.strings;
  */
 
 public class Q1 {
+
+    public static String[] query(String s, int[][] tags, int[] tagNumbers) {
+        BitSet bitSet = new BitSet(0);
+
+        for (int tagNumber : tagNumbers) {
+            BitSet tempSet = new BitSet(s.length());
+            for (int[] tag : tags) {
+                if (tag[2] == tagNumber) {
+                    for (int i = tag[0]; i <= tag[1]; i++) {
+                        tempSet.set(i);
+                    }
+                }
+            }
+
+            if (bitSet.length() == 0) {
+                bitSet = tempSet;
+            } else {
+                bitSet.and(tempSet);
+            }
+        }
+
+        char[] chars = s.toCharArray();
+        List<String> list = new ArrayList<>();
+
+        int start = bitSet.nextSetBit(0);
+        while (start != -1) {
+            int end = start;
+            while (end < bitSet.length()) {
+                int next = bitSet.nextSetBit(end + 1);
+                if (next == -1 | (next - end) != 1) {
+                    break;
+                }
+                end = next;
+            }
+            list.add(String.copyValueOf(chars, start, end - start + 1));
+            start = bitSet.nextSetBit(end + 1);
+        }
+
+        return list.toArray(new String[list.size()]);
+    }
 }
