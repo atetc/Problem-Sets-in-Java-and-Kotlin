@@ -157,7 +157,11 @@ Output: 2
 [Arrays.3](src/java/atetc/other/arrays/Q3.java) Watson gives Sherlock an array A of length N. Then he asks him to determine if there exists an element in the array such that the sum of the elements on its left is equal to the sum of the elements on its right. If there are no elements to the left/right, then the sum is considered to be zero.
                                                  Formally, find an i, such that, A1+A2...Ai-1 =Ai+1+Ai+2...AN.
 
-[Arrays.2](src/java/atetc/other/arrays/Q4.java) Given N integers, count the number of pairs of integers whose difference is K.
+[Arrays.4](src/java/atetc/other/arrays/Q4.java) Given N integers, count the number of pairs of integers whose difference is K.
+
+[Arrays.5](src/java/atetc/other/arrays/Q5.java) We have two arrays of size m: X and Y.
+                                                Please assign to each X[i] a pair from Y : Y[a[i]], to make the sum X[1]Y[a[1]] + ... + X[m]Y[a[m]] as lowest as possible.
+                                                Here a[1]..a[m] is a permutation of size m.
 
 ###Testing
 
@@ -206,6 +210,8 @@ Output: 2
                                                            Build tree from this print.
 
 [BinaryTrees.2](src/java/atetc/other/trees/binary/Q2.java) Please build BST from sorted array of integers.
+
+[BinaryTrees.3](src/java/atetc/other/trees/binary/Q3.java) Given a tree you should determine whether or not the tree is binary search tree.
 
 ###Testing
 
