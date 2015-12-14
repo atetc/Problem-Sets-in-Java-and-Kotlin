@@ -67,13 +67,13 @@ public class TestArrays {
 
     @Test
     public void testBuildPairs_5(){
-        int[] x = new int[]{1, 2};
-        int[] y = new int[]{1, 2};
+        int[] x = new int[]{2, 1, 2};
+        int[] y = new int[]{1, 2, 4};
 
-        assertArrayEquals(Q5.buildPairs(x, y), new int[]{0});
+        assertArrayEquals(Q5.buildPairs(x, y), new int[]{0, 1});
 
-        x = new int[]{1, 2};
-        y = new int[]{1, 2};
+        x = new int[]{45, };
+        y = new int[]{2, 3};
 
         assertArrayEquals(Q5.buildPairs(x, y), new int[]{1, 0});
     }
