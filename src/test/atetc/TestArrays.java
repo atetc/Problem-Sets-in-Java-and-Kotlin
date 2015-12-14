@@ -67,14 +67,24 @@ public class TestArrays {
 
     @Test
     public void testBuildPairs_5(){
-        int[] x = new int[]{2, 1, 2};
-        int[] y = new int[]{1, 2, 4};
+        int[] x = new int[]{2};
+        int[] y = new int[]{3};
+
+        assertArrayEquals(Q5.buildPairs(x, y), new int[]{0});
+
+        x = new int[]{2, 1};
+        y = new int[]{1, 2};
 
         assertArrayEquals(Q5.buildPairs(x, y), new int[]{0, 1});
 
-        x = new int[]{45, };
+        x = new int[]{45, 3};
         y = new int[]{2, 3};
 
-        assertArrayEquals(Q5.buildPairs(x, y), new int[]{1, 0});
+        assertArrayEquals(Q5.buildPairs(x, y), new int[]{0, 1});
+
+        x = new int[]{45, 3, 5};
+        y = new int[]{2, 3, 1};
+
+        assertArrayEquals(Q5.buildPairs(x, y), new int[]{2, 1, 0});
     }
 }

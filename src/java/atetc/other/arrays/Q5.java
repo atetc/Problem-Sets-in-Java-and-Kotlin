@@ -1,5 +1,7 @@
 package atetc.other.arrays;
 
+import java.util.Arrays;
+
 /**
  * From Akvelon set 26
  *
@@ -10,14 +12,44 @@ package atetc.other.arrays;
 public class Q5 {
 
     public static int[] buildPairs(int[] x, int[] y) {
-        int[] result = new int[x.length];
-
-
-
-        for (int i = 0; i < x.length; i++) {
-            result[i] =
+        if (x == null | y == null || x.length == 0 || y.length == 0) {
+            return null;
         }
 
-        return result;
+        if (x.length == 1) {
+            return new int[]{0};
+        }
+
+        Pair[] xPairs = new Pair[x.length];
+        Pair[] yPairs = new Pair[y.length];
+        for (int i = 0; i < x.length; i++) {
+            xPairs[i] = new Pair(i, x[i]);
+            yPairs[i] = new Pair(i, y[i]);
+        }
+        Arrays.sort(xPairs);
+        Arrays.sort(yPairs);
+
+        int[] matches = new int[x.length];
+
+        for (int i = 0; i < x.length; i++) {
+            matches[xPairs[i].index] = yPairs[y.length - 1 - i].index;
+        }
+
+        return matches;
+    }
+
+    public static class Pair implements Comparable<Pair> {
+        public int index;
+        public int value;
+
+        public Pair(int index, int value) {
+            this.index = index;
+            this.value = value;
+        }
+
+        @Override
+        public int compareTo(Pair other) {
+            return Integer.valueOf(this.value).compareTo(other.value);
+        }
     }
 }
