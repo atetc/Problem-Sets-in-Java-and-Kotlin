@@ -28,7 +28,7 @@ public class Q5 {
         //           n goes up until n is left child of its parent,
         //           then return this parent
         // case 3:   n is the last node in traversal ->
-        //           return root's parent, ie., null
+        //           return header's parent, ie., null
         while (n.parent != null && n.parent.right == n) {
             n = n.parent;
         }
@@ -58,14 +58,14 @@ public class Q5 {
             n = n.parent;
         }
         // case 3: n is the last node in traversal ->
-        //         return root's parent, ie., null
+        //         return header's parent, ie., null
         if (n.parent == null) return null;
         return n.parent.right;
     }
 
     public static BinaryTreeNode postorderSuccessor(BinaryTreeNode n) {
         // case 1: n is the last node in traversal ->
-        //         return root's parent, ie., null
+        //         return header's parent, ie., null
         if (n == null || n.parent == null) return null;
         // case 2:   n is left child of its parent ->
         //           just return parent

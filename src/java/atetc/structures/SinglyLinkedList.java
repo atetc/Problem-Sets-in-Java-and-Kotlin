@@ -4,14 +4,14 @@ package atetc.structures;
  * Created by Atetc on 02.12.2015.
  */
 public class SinglyLinkedList<T> {
-    public Node<T> root;
+    public Node<T> header;
 
     public SinglyLinkedList(T rootData) {
-        root = new Node<T>(rootData);
+        header = new Node<T>(rootData);
     }
 
     public static class Node<T> {
-        private T data;
+        public T data;
         public Node<T> next;
 
         public Node(T data) {
