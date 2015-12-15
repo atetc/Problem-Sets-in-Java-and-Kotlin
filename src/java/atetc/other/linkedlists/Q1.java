@@ -17,8 +17,8 @@ import atetc.structures.SinglyLinkedList.Node;
 public class Q1 {
 
     public static Node<Integer> removeHead(Node<Integer> head) {
-        Node<Integer> next = head.getNext();
-        head.setNext(null);
+        Node<Integer> next = head.next;
+        head.next = null;
         return next;
     }
 }
