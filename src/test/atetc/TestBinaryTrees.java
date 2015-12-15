@@ -77,4 +77,27 @@ public class TestBinaryTrees {
 
         assertTrue(Q2.getBSTFromSortedArray(new int[]{0, 1, 2, 3, 4, 5}).equals(tree));
     }
+
+    @Test
+    public void testIsBST_3(){
+        BinaryTree<Integer> tree = null;
+        assertTrue(!Q3.isBST(tree));
+
+        tree = new BinaryTree<>(2);
+        assertTrue(Q3.isBST(tree));
+
+        tree = new BinaryTree<>(2);
+        tree.root.setChild(1, 3);
+        assertTrue(Q3.isBST(tree));
+
+        tree = new BinaryTree<>(2);
+        tree.root.setChild(1, 4);
+        tree.root.right.setChild(3, 5);
+        assertTrue(Q3.isBST(tree));
+
+        tree = new BinaryTree<>(2);
+        tree.root.setChild(1, 4);
+        tree.root.right.setChild(1, 5);
+        assertTrue(!Q3.isBST(tree));
+    }
 }
