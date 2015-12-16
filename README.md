@@ -234,7 +234,13 @@ Output: 2
 
 ###Solutions
 
-[LinkedLists.1](src/java/atetc/other/linkedlists/Q1.java) 
+[LinkedLists.1](src/java/atetc/other/linkedlists/Q1.java)
+ 
+[LinkedLists.2](src/java/atetc/other/linkedlists/Q2.java)
+ 
+[LinkedLists.3](src/java/atetc/other/linkedlists/Q3.java) You are given a node that is the beginning of a linked list. 
+                                                          This list always contains a tail and a loop.
+                                                          Your objective is to determine the length of the loop. 
 
 ###Testing
 

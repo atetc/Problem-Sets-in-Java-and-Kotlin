@@ -11,20 +11,11 @@ public class SinglyLinkedList<T> {
     }
 
     public static class Node<T> {
-        private T data;
-        private Node<T> next;
+        public T data;
+        public Node<T> next;
 
         public Node(T data) {
             this.data = data;
-        }
-
-        public Node setNext(Node<T> next) {
-            this.next = next;
-            return next;
-        }
-
-        public Node<T> getNext() {
-            return next;
         }
 
         @Override
