@@ -1,6 +1,7 @@
 package atetc.chap02;
 
-import atetc.helpers.LinkedListNode;
+import atetc.structures.LinkedList;
+import atetc.structures.LinkedList.Node;
 
 import java.util.HashSet;
 
@@ -14,9 +15,10 @@ public class Q1 {
      */
 
     // with extra space
-    public static void removeDuplicates(LinkedListNode n) {
+    public static void removeDuplicates(LinkedList<Integer> list) {
+        Node<Integer> n = list.head;
         HashSet<Integer> set = new HashSet<>();
-        LinkedListNode prev = null;
+        Node<Integer> prev = null;
         while (n != null) {
             if (set.contains(n.data)) {
                 if (prev != null) {
@@ -31,9 +33,10 @@ public class Q1 {
     }
 
     //without extra space
-    public static void removeDuplicates2(LinkedListNode n) {
+    public static void removeDuplicates2(LinkedList<Integer> list) {
+        Node<Integer> n = list.head;
         while (n != null) {
-            LinkedListNode runner = n;
+            Node<Integer> runner = n;
             while (runner.next != null) {
                 if (runner.next.data == n.data) {
                     runner.next = runner.next.next;

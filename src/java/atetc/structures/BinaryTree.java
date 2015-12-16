@@ -11,10 +11,6 @@ public class BinaryTree<T> {
         this.root = root;
     }
 
-    public BinaryTree() {
-
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -57,7 +53,7 @@ public class BinaryTree<T> {
     }
 
     public static class Node<T> {
-        private T data;
+        public T data;
         public Node<T> left;
         public Node<T> right;
 

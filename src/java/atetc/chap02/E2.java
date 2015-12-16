@@ -1,14 +1,15 @@
 package atetc.chap02;
 
-import atetc.helpers.LinkedListNode;
+import atetc.structures.LinkedList;
+import atetc.structures.LinkedList.Node;
 
 public class E2 {
 
-    public LinkedListNode merge(LinkedListNode n1, LinkedListNode n2) {
+    public Node<Integer> merge(Node<Integer> n1, Node<Integer> n2) {
         if (n1 == null) return n2;
         if (n2 == null) return n1;
-        LinkedListNode retHead = null;
-        LinkedListNode retTail = null;
+        Node<Integer> retHead = null;
+        Node<Integer> retTail = null;
         while (n1 != null && n2 != null) {
             if (n1.data < n2.data) {
                 if (retHead == null) {
@@ -41,9 +42,9 @@ public class E2 {
     
   //-----------------------------------------------------
     public static void main(String[] args) {
-        LinkedListNode list1 = LinkedListNode.buildList(new int[] {1,2,3,5,7,8,10});
-        LinkedListNode list2 = LinkedListNode.buildList(new int[] {2,4,6,7,9,11,12,15});
-        LinkedListNode res = new E2().merge(list1, list2);
-        LinkedListNode.printList(res);
+        LinkedList list1 = LinkedList.buildList(new int[] {1,2,3,5,7,8,10});
+        LinkedList list2 = LinkedList.buildList(new int[] {2,4,6,7,9,11,12,15});
+//        LinkedList res = new E2().merge(list1.head, list2.head);
+//        LinkedList.printList(res);
     }
 }

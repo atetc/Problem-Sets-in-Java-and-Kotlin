@@ -1,6 +1,6 @@
 package atetc.chap02;
 
-import atetc.helpers.LinkedListNode;
+import atetc.structures.LinkedList.Node;
 
 /**
  * Implement an algorithm to find the nth to last element of a singly linked list.
@@ -8,12 +8,12 @@ import atetc.helpers.LinkedListNode;
 public class Q2 {
 
     //Returns nearest node if index out of bounds.
-    public static LinkedListNode nthToLast(LinkedListNode head, int n) {
+    public static Node<Integer> nthToLast(Node<Integer> head, int n) {
         if (head == null || n < 1) {
             return null;
         }
 
-        LinkedListNode p1 = head, p2 = head;
+        Node<Integer> p1 = head, p2 = head;
         for (int i = 0; i < n - 1; ++i) {
             if (p2 == null) {
                 return null;

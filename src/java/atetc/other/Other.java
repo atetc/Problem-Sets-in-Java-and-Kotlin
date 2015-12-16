@@ -1,10 +1,10 @@
 package atetc.other;
 
-import atetc.helpers.LinkedListNode;
+import atetc.structures.LinkedList;
+import atetc.structures.LinkedList.Node;
 import atetc.helpers.BinaryTreeNode;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Stack;
 
 import static atetc.helpers.Printer.*;
@@ -41,11 +41,15 @@ public class Other {
         return sb.toString().length() >= s.length() ? s : sb.toString();
     }
 
-    public static LinkedListNode reverseList(LinkedListNode n) {
-        if (n == null || n.next == null) return n;
-        LinkedListNode head = n;
-        LinkedListNode curr =  head.next;
-        LinkedListNode next = curr.next;
+    public static void reverseList(LinkedList list) {
+        Node n = list.head;
+        if (n == null || n.next == null) {
+            list.head = n;
+            return;
+        }
+        Node head = n;
+        Node curr =  head.next;
+        Node next = curr.next;
         head.next = null;
         while (true) {
             curr.next = head;
@@ -54,7 +58,9 @@ public class Other {
             if (curr == null) break;
             next = curr.next;
         }
-        return head;
+
+        list.head = head;
+        return;
     }
 
     /**
@@ -62,8 +68,9 @@ public class Other {
      * nodes less than x come before all nodes greater than or equal to x.
      */
 
-    static LinkedListNode partition(LinkedListNode n, int x) {
-        LinkedListNode head1 = null, tail1 = null,
+    static void partition(LinkedList<Integer> list, int x) {
+        Node<Integer> n = list.head;
+        Node<Integer> head1 = null, tail1 = null,
                 head2 = null, tail2 = null;
         while (n != null) {
             if (n.data < x) {
@@ -88,19 +95,24 @@ public class Other {
         if (tail2 != null) tail2.next = null;
 
         // List1 is empty
-        if (head1 == null) return head2;
+        if (head1 == null) {
+            list.head = head2;
+            return;
+        }
         tail1.next = head2;
-        return head1;
+        list.head = head1;
     }
 
     /**
      * Implement a function to check if a linked list is
      * a palindrome (like 0->1->2->1->0).
      */
-    static boolean isPalindrome(LinkedListNode head) {
+    static boolean isPalindrome(LinkedList list) {
+        Node head = list.head;
+
         if (head == null) return false;
-        LinkedListNode p1 = head, p2 = head;
-        Stack<Integer> s = new Stack<>();
+        Node p1 = head, p2 = head;
+        Stack s = new Stack();
         while (p2 != null && p2.next != null) {
             s.push(p1.data);
             p1 = p1.next;
@@ -118,10 +130,10 @@ public class Other {
     //TEST----------------------------------
     public static void main(String[] args) {
         println(isPalindrome(null));
-        println(isPalindrome(LinkedListNode.buildList(new int[] {1})));
-        println(isPalindrome(LinkedListNode.buildList(new int[] {1,1})));
-        println(isPalindrome(LinkedListNode.buildList(new int[] {1,2,3,4,4,3,2,1})));
-        println(isPalindrome(LinkedListNode.buildList(new int[] {1,2,3,4,4,3,3,2,1})));
+        println(isPalindrome(LinkedList.buildList(new int[] {1})));
+        println(isPalindrome(LinkedList.buildList(new int[] {1,1})));
+        println(isPalindrome(LinkedList.buildList(new int[] {1,2,3,4,4,3,2,1})));
+        println(isPalindrome(LinkedList.buildList(new int[] {1,2,3,4,4,3,3,2,1})));
     }
 
     /**
@@ -230,8 +242,8 @@ public class Other {
         }
     }
 
-    private LinkedList<Dog> dogs = new LinkedList<>();
-    private LinkedList<Cat> cats = new LinkedList<>();
+    private java.util.LinkedList dogs = new java.util.LinkedList();
+    private java.util.LinkedList cats = new java.util.LinkedList();
 
     public void enqueue(Animal a) {
         if (a instanceof Dog) {
@@ -245,12 +257,12 @@ public class Other {
 
     public Dog dequeueDog() {
         if (noDog()) throw new IllegalStateException("No dogs!");
-        return dogs.removeFirst();
+        return (Dog) dogs.removeFirst();
     }
 
     public Cat dequeueCat() {
         if (noCat()) throw new IllegalStateException("No cats!");
-        return cats.removeFirst();
+        return (Cat) cats.removeFirst();
     }
 
     public Animal dequeueAny() {
@@ -269,12 +281,12 @@ public class Other {
 
     public Dog peekDog() {
         if (noDog()) throw new IllegalStateException("No dogs!");
-        return dogs.getFirst();
+        return (Dog) dogs.getFirst();
     }
 
     public Cat peekCat() {
         if (noDog()) throw new IllegalStateException("No cats!");
-        return cats.getFirst();
+        return (Cat) cats.getFirst();
     }
 
     public Animal peekAny() {

@@ -1,6 +1,7 @@
 package atetc.chap02;
 
-import atetc.helpers.LinkedListNode;
+import atetc.structures.LinkedList;
+import atetc.structures.LinkedList.Node;
 
 /**
  * You have two numbers represented by a linked list, where each node contains a
@@ -10,13 +11,15 @@ import atetc.helpers.LinkedListNode;
  */
 public class Q4 {
 
-    public static LinkedListNode addLists(LinkedListNode n1, LinkedListNode n2) {
+    public static Node<Integer> addLists(LinkedList<Integer> list1, LinkedList<Integer> list2) {
+        Node<Integer> n1 = list1.head;
+        Node<Integer> n2 = list2.head;
         if (n1 == null && n2 == null) {
             return null;
         }
 
-        LinkedListNode n = new LinkedListNode(-1);
-        LinkedListNode head = n;
+        Node<Integer> n = new Node<>(-1);
+        Node<Integer> head = n;
         int carry = 0;
         while (n1 != null || n2 != null || carry != 0) {
             int sum = 0;
@@ -33,7 +36,7 @@ public class Q4 {
             }
             int digit = sum % 10;
             carry = sum / 10;
-            n.next = new LinkedListNode(digit);
+            n.next = new Node<>(digit);
             n = n.next;
         }
         return head.next;
@@ -41,12 +44,18 @@ public class Q4 {
 
 
     // recursively
-    public static LinkedListNode addLists2(LinkedListNode n1, LinkedListNode n2, int carry) {
+    public static Node<Integer> addLists2(LinkedList<Integer> list1, LinkedList<Integer> list2, int carry) {
+        Node<Integer> n1 = list1.head;
+        Node<Integer> n2 = list2.head;
         if (n1 == null && n2 == null) {
             return null;
         }
 
-        LinkedListNode result = new LinkedListNode(carry, null, null);
+        return addLists2(n1, n2, carry);
+    }
+
+    private static Node<Integer> addLists2(Node<Integer> n1, Node<Integer> n2, int carry) {
+        Node<Integer> result = new Node<>(carry, null, null);
         int value = carry;
         if (n1 != null) {
             value += n1.data;
@@ -58,7 +67,7 @@ public class Q4 {
 
         result.data = value % 10;
 
-        LinkedListNode more = addLists2(n1 == null ? null : n1.next,
+        Node<Integer> more = addLists2(n1 == null ? null : n1.next,
                 n2 == null ? null : n2.next,
                 value > 9 ? 1 : 0);
 

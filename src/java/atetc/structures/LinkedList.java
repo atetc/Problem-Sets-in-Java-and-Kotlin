@@ -1,36 +1,33 @@
-package atetc.helpers;
+package atetc.structures;
 
-public class LinkedListNode {
-    public int data;
-    public LinkedListNode next;
+public class LinkedList<T> {
+    public Node<T> head;
+    public Node<T> tail;
+
     private static int MAX_PRINT_LENGTH = 500;
 
-    public LinkedListNode(int x) {
-        data = x;
-        next = null;
+    public LinkedList(T data) {
+        this.head.data = data;
     }
 
-    public LinkedListNode(int carry, LinkedListNode next, LinkedListNode previous) {
-        this.data = carry;
-        this.next = next;
-    }
-
-    public static LinkedListNode buildList(int[] a) {
+    public static LinkedList<Integer> buildList(int[] a) {
         if (a == null || a.length == 0) {
             return null;
         }
 
-        LinkedListNode n = new LinkedListNode(a[0]);
-        LinkedListNode head = n;
+        LinkedList<Integer> list = new LinkedList<>(a[0]);
+
+        Node<Integer> n = list.head;
         for (int i = 1; i < a.length; ++i) {
-            n.next = new LinkedListNode(a[i]);
+            n.next = new Node<>(a[i], n, null);
             n = n.next;
         }
 
-        return head;
+        return list;
     }
 
-    public static void printList(LinkedListNode n) {
+    public void printList(LinkedList<T> list) {
+        Node<T> n = list.head;
         int i = 0;
         while (n != null) {
             System.out.print(n.data + "->");
@@ -58,8 +55,8 @@ public class LinkedListNode {
             return false;
         }
 
-        LinkedListNode node1 = (LinkedListNode) obj;
-        LinkedListNode node2 = this;
+        Node node1 = ((LinkedList) obj).head;
+        Node node2 = this.head;
 
         while (node1 != null) {
             if (node1.data != node2.data) {
@@ -70,5 +67,21 @@ public class LinkedListNode {
         }
 
         return true;
+    }
+
+    public static class Node<T> {
+        public T data;
+        public Node next;
+        public Node previous;
+
+        public Node(T data) {
+            this.data = data;
+        }
+
+        public Node(T data, Node<T> previous, Node<T> next) {
+            this.data = data;
+            this.previous = previous;
+            this.next = next;
+        }
     }
 }

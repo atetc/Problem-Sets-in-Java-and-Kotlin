@@ -1,21 +1,13 @@
 package atetc.structures;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * Created by Atetc on 02.12.2015.
  */
 public class SinglyLinkedList<T> {
-    private Node<T> root;
+    public Node<T> head;
 
     public SinglyLinkedList(T rootData) {
-        root = new Node<T>(rootData);
-    }
-
-    public Node<T> getRoot() {
-        return root;
+        head = new Node<T>(rootData);
     }
 
     public static class Node<T> {

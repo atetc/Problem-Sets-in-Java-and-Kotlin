@@ -1,6 +1,6 @@
 package atetc.chap02;
 
-import atetc.helpers.LinkedListNode;
+import atetc.structures.LinkedList.Node;
 
 /**
  * Given a circular linked list, implement an algorithm which returns
@@ -8,9 +8,9 @@ import atetc.helpers.LinkedListNode;
  */
 public class Q5 {
 
-    public static LinkedListNode findBeginning(LinkedListNode head) {
+    public static Node findBeginning(Node head) {
 
-        LinkedListNode fast = head, slow = head;
+        Node fast = head, slow = head;
 
         while (fast != null && fast.next != null) {
             fast = fast.next.next;

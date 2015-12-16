@@ -1,6 +1,6 @@
 package atetc.chap02;
 
-import atetc.helpers.LinkedListNode;
+import atetc.structures.LinkedList.Node;
 
 /**
  * Implement an algorithm to delete a node in the middle of a singly linked list,
@@ -9,7 +9,7 @@ import atetc.helpers.LinkedListNode;
  */
 public class Q3 {
 
-    public static boolean deleteNode(LinkedListNode n) {
+    public static boolean deleteNode(Node n) {
         //XXX: fail if the node is the last element.
         if (n == null || n.next == null) {
             return false;

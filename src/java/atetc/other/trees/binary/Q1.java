@@ -1,12 +1,14 @@
 package atetc.other.trees.binary;
 
-import java.util.Arrays;
-import java.util.Collections;
+import atetc.structures.BinaryTree;
+import atetc.structures.BinaryTree.Node;
+
+import java.util.*;
 
 /**
  * From Akvelon set 26
  *
- * Given a binary tree print it in inward spiral order i.e first print level 1, then level n, then level 2, then n-1 and so on.
+ * Given a binary tree. Print it in inward spiral order i.e first print level 1, then level n, then level 2, then n-1 and so on.
  * For Ex:
  * 1
  * 2 3
@@ -19,41 +21,54 @@ import java.util.Collections;
  */
 public class Q1 {
 
-    public static int[][] printTreeFromSpiralArray(int[] arr, int n) {
-        if (n == 0) {
+    public static List<Integer> buildInwardSpiralArray(BinaryTree<Integer> tree) {
+        if (tree == null || tree.root == null) {
             return null;
         }
 
-        int[][] result = new int[n][];
+        List<LinkedList<Integer>> array = new ArrayList<>();
 
-        int level = 0;
-        int counter = 0;
-        while (level < n) {
-            int levelLength = (int) Math.pow(2, level);
-            int nextLevelLength = (int) Math.pow(2, n - level - 1);
+        Queue<Node<Integer>> currentLevel = new LinkedList<>();
+        Queue<Node<Integer>> nextLevel = new LinkedList<>();
 
-            if (counter < arr.length) {
-                result[level] = Arrays.copyOfRange(arr, counter, counter + levelLength);
-            } else {
-                int start = arr.length - (counter - arr.length) - levelLength;
-                int end = arr.length - (counter - arr.length);
-                result[level] = reverse(Arrays.copyOfRange(arr, start, end));
+        currentLevel.add(tree.root);
+
+        while (!currentLevel.isEmpty()) {
+            LinkedList<Integer> level = new LinkedList<>();
+            for (Node<Integer> node : currentLevel) {
+                if (node.left != null) {
+                    nextLevel.add(node.left);
+                }
+
+                if (node.right != null) {
+                    nextLevel.add(node.right);
+                }
+                level.add(node.data);
             }
 
-            counter += levelLength + nextLevelLength;
-            level++;
+            array.add(level);
+
+            currentLevel = nextLevel;
+            nextLevel = new LinkedList<>();
+        }
+
+        List<Integer> result = new ArrayList<>();
+        result.add(tree.root.data);
+
+        if (array.size() == 1) {
+            return result;
+        }
+
+        int start = 1;
+        int end = array.size() - 1;
+        while (start < end) {
+            result.addAll(array.get(start));
+            Collections.reverse(array.get(end));
+            result.addAll(array.get(end));
+            end--;
+            start++;
         }
 
         return result;
-    }
-
-    private static int[] reverse(int[] arr) {
-        for (int i = 0; i < arr.length / 2; i++) {
-            int temp = arr[i];
-            arr[i] = arr[arr.length - 1 - i];
-            arr[arr.length - 1 - i] = temp;
-        }
-
-        return arr;
     }
 }
