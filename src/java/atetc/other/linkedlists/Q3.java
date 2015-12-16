@@ -12,7 +12,7 @@ import atetc.structures.SinglyLinkedList.Node;
 public class Q3 {
 
     public static int getLoopSize(SinglyLinkedList<Integer> list) {
-        if (list == null || list.header == null || list.header.next == null) {
+        if (list == null || list.head == null || list.head.next == null) {
             return 0;
         }
 
@@ -29,8 +29,8 @@ public class Q3 {
     }
 
     private static Node getAnyNodeFromLoop(SinglyLinkedList<Integer> list) {
-        Node<Integer> fast = list.header;
-        Node<Integer> slow = list.header;
+        Node<Integer> fast = list.head;
+        Node<Integer> slow = list.head;
 
         while (fast.next.next != null) {
             slow = slow.next;
