@@ -26,7 +26,17 @@ public class TestBinaryTrees {
         assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 2))));
 
         tree.root.right = new Node<>(3);
-        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 2, 3))));
+        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 3, 2))));
+
+        tree.root.left.left = new Node<>(4);
+        tree.root.left.right = new Node<>(5);
+        tree.root.right.right = new Node<>(7);
+        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 7, 5, 4, 2, 3))));
+
+        tree.root.left.left.left = new Node<>(10);
+        tree.root.left.left.right = new Node<>(11);
+        tree.root.right.right.right = new Node<>(13);
+        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 13, 11,10, 2, 3, 7, 5, 4))));
     }
 
     @Test

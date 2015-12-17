@@ -61,12 +61,17 @@ public class Q1 {
 
         int start = 1;
         int end = array.size() - 1;
-        while (start < end) {
-            result.addAll(array.get(start));
-            Collections.reverse(array.get(end));
-            result.addAll(array.get(end));
+        while (start <= end) {
+            LinkedList<Integer> linkedList = array.get(end);
+            Collections.reverse(linkedList);
+            result.addAll(linkedList);
+
+            if (start < end) {
+                result.addAll(array.get(start));
+                start++;
+            }
+
             end--;
-            start++;
         }
 
         return result;
