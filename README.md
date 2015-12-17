@@ -240,7 +240,9 @@ Output: 2
  
 [LinkedLists.3](src/java/atetc/other/linkedlists/Q3.java) You are given a node that is the beginning of a linked list. 
                                                           This list always contains a tail and a loop.
-                                                          Your objective is to determine the length of the loop. 
+                                                          Your objective is to determine the length of the loop.
+                                                           
+[LinkedLists.4](src/java/atetc/other/linkedlists/Q4.java) Given two singly linked lists, that might intersect, print out the element, at which they intersect and its index.
 
 ###Testing
 
