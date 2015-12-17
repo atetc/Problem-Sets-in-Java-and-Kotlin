@@ -1,6 +1,6 @@
 package atetc.other.linkedlists;
 
-import atetc.structures.SinglyLinkedList.Node;
+import atetc.structures.LinkedList.Node;
 
 /**
  * Microsoft interview.
@@ -16,8 +16,8 @@ import atetc.structures.SinglyLinkedList.Node;
  */
 public class Q1 {
 
-    public static Node<Integer> removeHead(Node<Integer> head) {
-        Node<Integer> next = head.next;
+    public static Node removeHead(Node head) {
+        Node next = head.next;
         head.next = null;
         return next;
     }

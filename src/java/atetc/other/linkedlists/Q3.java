@@ -1,7 +1,7 @@
 package atetc.other.linkedlists;
 
-import atetc.structures.SinglyLinkedList;
-import atetc.structures.SinglyLinkedList.Node;
+import atetc.structures.LinkedList;
+import atetc.structures.LinkedList.Node;
 
 /**
  * From Akvelon set 3
@@ -11,7 +11,7 @@ import atetc.structures.SinglyLinkedList.Node;
  */
 public class Q3 {
 
-    public static int getLoopSize(SinglyLinkedList<Integer> list) {
+    public static int getLoopSize(LinkedList<Integer> list) {
         if (list == null || list.head == null || list.head.next == null) {
             return 0;
         }
@@ -28,9 +28,9 @@ public class Q3 {
         return result;
     }
 
-    private static Node getAnyNodeFromLoop(SinglyLinkedList<Integer> list) {
-        Node<Integer> fast = list.head;
-        Node<Integer> slow = list.head;
+    private static Node getAnyNodeFromLoop(LinkedList list) {
+        Node fast = list.head;
+        Node slow = list.head;
 
         while (fast.next.next != null) {
             slow = slow.next;

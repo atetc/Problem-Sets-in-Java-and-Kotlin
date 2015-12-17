@@ -1,8 +1,9 @@
 package atetc;
 
 import atetc.other.linkedlists.*;
-import atetc.structures.SinglyLinkedList;
-import atetc.structures.SinglyLinkedList.Node;
+import atetc.structures.LinkedList;
+import atetc.structures.LinkedList.Node;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -26,9 +27,9 @@ public class TestLinkedLists {
     public void testGetLoopSize_3(){
         assertTrue(Q3.getLoopSize(null) == 0);
 
-        assertTrue(Q3.getLoopSize(new SinglyLinkedList<>(3)) == 0);
+        assertTrue(Q3.getLoopSize(new LinkedList<>(3)) == 0);
 
-        SinglyLinkedList<Integer> list = new SinglyLinkedList<>(3);
+        LinkedList<Integer> list = new LinkedList<>(3);
         list.head.next = new Node<>(5);
         Node<Integer> loopStartNode = new Node<>(6);
         list.head.next.next = loopStartNode;
@@ -40,23 +41,23 @@ public class TestLinkedLists {
 
     @Test
     public void testGetIntersection_4(){
-        SinglyLinkedList<Integer> list1 = new SinglyLinkedList<>(0);
+        LinkedList<Integer> list1 = new LinkedList<>(0);
         list1.head.next = new Node<>(1);
         list1.head.next.next = new Node<>(2);
         list1.head.next.next.next = new Node<>(3);
         list1.head.next.next.next.next = new Node<>(4);
+        assertTrue(Q4.getIntersectionIndex(list1, null) == -1);
 
-        SinglyLinkedList<Integer> list2 = new SinglyLinkedList<>(55);
-        list2.head.next = new Node<>(44);
-        list2.head.next.next = new Node<>(33);
-        list2.head.next.next.next = list1.head.next.next.next;
+        LinkedList<Integer> list2 = new LinkedList<>(55);
+        list2.head.next = list1.head.next.next;
+        assertTrue(Q4.getIntersectionIndex(null, list2) == -1);
 
         assertTrue(Q4.getIntersectionIndex(list1, list2) == 2);
 
-        list2.head.next.next.next = list1.head.next;
-        assertTrue(Q4.getIntersectionIndex(list1, list2) == 1);
-
-        list2.head.next.next.next = list1.head;
+        list2.head.next = list1.head;
         assertTrue(Q4.getIntersectionIndex(list1, list2) == 0);
+
+        list2.head.next = list1.head.next.next.next.next;
+        assertTrue(Q4.getIntersectionIndex(list1, list2) == 4);
     }
 }

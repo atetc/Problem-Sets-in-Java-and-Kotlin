@@ -7,7 +7,7 @@ public class LinkedList<T> {
     private static int MAX_PRINT_LENGTH = 500;
 
     public LinkedList(T data) {
-        this.head.data = data;
+        this.head = new Node<>(data);
     }
 
     public static LinkedList<Integer> buildList(int[] a) {
@@ -26,11 +26,11 @@ public class LinkedList<T> {
         return list;
     }
 
-    public void printList(LinkedList<T> list) {
-        Node<T> n = list.head;
+    public void printList(LinkedList list) {
+        Node n = list.head;
         int i = 0;
         while (n != null) {
-            System.out.print(n.data + "->");
+            System.out.print(n.data.toString() + "->");
             n = n.next;
             if (++i > MAX_PRINT_LENGTH) {
                 System.out.println("[MAX_LEN]");
@@ -71,8 +71,8 @@ public class LinkedList<T> {
 
     public static class Node<T> {
         public T data;
-        public Node next;
-        public Node previous;
+        public Node<T> next;
+        public Node<T> previous;
 
         public Node(T data) {
             this.data = data;
@@ -82,6 +82,24 @@ public class LinkedList<T> {
             this.data = data;
             this.previous = previous;
             this.next = next;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+
+            if (obj == this) {
+                return true;
+            }
+
+            if (obj.getClass() != getClass()) {
+                return false;
+            }
+
+            Node node = (Node) obj;
+            return node.data == this.data;
         }
     }
 }
