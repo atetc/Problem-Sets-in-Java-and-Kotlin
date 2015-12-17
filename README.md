@@ -162,6 +162,14 @@ Output: 2
 [Arrays.5](src/java/atetc/other/arrays/Q5.java) We have two arrays of size m: X and Y.
                                                 Please assign to each X[i] a pair from Y : Y[a[i]], to make the sum X[1]Y[a[1]] + ... + X[m]Y[a[m]] as lowest as possible.
                                                 Here a[1]..a[m] is a permutation of size m.
+                                                
+[Arrays.6](src/java/atetc/other/arrays/Q6.java) Give you an array which has n integers, it has both positive and negative integers.
+                                                 Now you need sort this array in a special way.
+                                                 After that, the negative integers should be in the front, and the positive integers should be in the back.
+                                                 Also the relative position should not be changed.
+                                                 eg. -1 1 3 -2 2 ans: -1 -2 1 3 2.
+                                                 O(n)time complexity and o(1) space complexity is perfect.
+                                                 There's in-place sorting solution for this problem, that would be perfect.
 
 ###Testing
 

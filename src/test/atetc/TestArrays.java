@@ -87,4 +87,11 @@ public class TestArrays {
 
         assertArrayEquals(Q5.buildPairs(x, y), new int[]{2, 1, 0});
     }
+
+    @Test
+    public void testDivideNegativeAndPositiveIntegers_6(){
+        int[] array = new int[]{-1, 1, 3, -2, 2};
+        Q6.divideNegativeAndPositiveIntegers(array);
+        assertArrayEquals(array, new int[]{-1, -2, 1, 3, 2});
+    }
 }
