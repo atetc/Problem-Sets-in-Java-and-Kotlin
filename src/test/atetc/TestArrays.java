@@ -86,6 +86,11 @@ public class TestArrays {
         y = new int[]{2, 3, 1};
 
         assertArrayEquals(Q5.buildPairs(x, y), new int[]{2, 1, 0});
+
+        x = new int[]{-1000, -10, -3, 0, 4};
+        y = new int[]{1, 0, -200, -500, -700};
+
+        assertArrayEquals(Q5.buildPairs(x, y), new int[]{0, 1, 2, 3, 4});
     }
 
     @Test
