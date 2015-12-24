@@ -1,8 +1,12 @@
 package atetc;
 
 import atetc.other.arrays.*;
-import org.junit.Assert;
+import atetc.other.arrays.Q7.Machine;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
@@ -98,5 +102,14 @@ public class TestArrays {
         int[] array = new int[]{-1, 1, 3, -2, 2};
         Q6.divideNegativeAndPositiveIntegers(array);
         assertArrayEquals(array, new int[]{-1, -2, 1, 3, 2});
+    }
+
+    @Test
+    public void testArrays_7(){
+        List<Machine> machines = new ArrayList<>();
+        machines.add(new Machine(new long[]{4, 6}));
+        machines.add(new Machine(new long[]{1, 2, 3}));
+
+        assertTrue(Q7.getLowestValue(machines, 3) == 3);
     }
 }
