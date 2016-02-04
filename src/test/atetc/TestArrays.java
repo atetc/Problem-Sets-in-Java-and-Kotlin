@@ -112,4 +112,11 @@ public class TestArrays {
 
         assertTrue(Q7.getLowestValue(machines, 3) == 3);
     }
+
+    @Test
+    public void testArrays_8(){
+        int[] array = new int[]{-1, 1, 2};
+
+        assertTrue(Q8.perform(array) == 3);
+    }
 }
