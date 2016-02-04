@@ -115,8 +115,8 @@ public class TestArrays {
 
     @Test
     public void testArrays_8(){
-        int[] array = new int[]{-1, 1, 2};
+        int[] array = new int[]{1, 2, 4};
 
-        assertTrue(Q8.perform(array) == 3);
+        assertTrue(Q8.getAllVariants(array) == 3);
     }
 }

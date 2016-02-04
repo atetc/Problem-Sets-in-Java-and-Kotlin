@@ -13,7 +13,19 @@ package atetc.other.arrays;
 public class Q8 {
 
 
-    public static int perform(int[] array) {
-        return 0;
+    public static int getAllVariants(int[] array) {
+        int result = 0;
+
+        int l = 0;
+        int r = array.length - 1;
+
+        int and = array[l];
+        for (int i = l + 1; i <= r; i++) {
+            and = and & array[i];
+        }
+
+        result = and;
+
+        return result;
     }
 }
