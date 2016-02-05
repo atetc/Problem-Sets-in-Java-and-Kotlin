@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -110,13 +111,14 @@ public class TestArrays {
         machines.add(new Machine(new long[]{4, 6}));
         machines.add(new Machine(new long[]{1, 2, 3}));
 
-        assertTrue(Q7.getLowestValue(machines, 3) == 3);
+//        assertTrue(Q7.getLowestValue(machines, 3) == 3);
     }
 
     @Test
     public void testArrays_8(){
-        int[] array = new int[]{1, 2, 4};
+        int[] array = new int[]{9, 10, 11};
 
-        assertTrue(Q8.getAllVariants(array) == 3);
+        assertEquals(Q8.rangeBitwiseAnd(5, 7), 4);
+//        assertEquals(Q8.getAllVariants(array), 1);
     }
 }
