@@ -3,10 +3,8 @@ package atetc;
 import atetc.other.strings.*;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class TestStrings {
 
@@ -23,5 +21,12 @@ public class TestStrings {
         assertArrayEquals(Q1.query(s, tags, new int[]{1}), new String[]{"def"});
         assertArrayEquals(Q1.query(s, tags, new int[]{0}), new String[]{"cdefgh", "klm"});
         assertArrayEquals(Q1.query(s, tags, new int[]{0, 1}), new String[]{"def"});
+    }
+
+    @Test
+    public void testCorpWar_24_1(){
+        assertEquals(Q2.minReplacements("intellect", "tell"), 1);
+        assertEquals(Q2.minReplacements("google", "apple"), 0);
+        assertEquals(Q2.minReplacements("sirisiri", "siri"), 2);
     }
 }

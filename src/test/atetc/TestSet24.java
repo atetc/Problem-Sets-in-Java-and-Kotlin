@@ -2,7 +2,6 @@ package atetc;
 
 import atetc.other.linkedlists.Q1;
 import atetc.other.set24.*;
-import atetc.structures.SinglyLinkedList.Node;
 import org.junit.Test;
 
 import java.util.ArrayList;
