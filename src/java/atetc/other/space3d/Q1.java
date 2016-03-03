@@ -1,4 +1,4 @@
-package atetc.other.points3d;
+package atetc.other.space3d;
 
 import java.util.Random;
 

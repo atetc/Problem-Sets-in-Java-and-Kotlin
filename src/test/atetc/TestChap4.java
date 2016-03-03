@@ -238,15 +238,15 @@ public class TestChap4 {
         n3.left = n6; n2.right = n7; n7.left = n9;
 
         LinkedList<LinkedList<BinaryTreeNode>> lists = new LinkedList<>();
-        lists.add(new LinkedList<>());
+        lists.add(new LinkedList<BinaryTreeNode>());
         lists.get(0).add(n5);
 
         assertTrue(Q8.findSumPaths(root, 5).equals(lists));
 
         lists = new LinkedList<>();
-        lists.add(new LinkedList<>());
+        lists.add(new LinkedList<BinaryTreeNode>());
         lists.get(0).add(n8);
-        lists.add(new LinkedList<>());
+        lists.add(new LinkedList<BinaryTreeNode>());
         lists.get(1).add(n3);
         lists.get(1).add(n5);
 

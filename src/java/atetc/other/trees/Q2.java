@@ -22,7 +22,7 @@ public class Q2 {
             return result;
         }
 
-        Tree.Node root = tree.getRoot();
+        final Tree.Node root = tree.getRoot();
         if (root.getChildren() == null  || root.getChildren().isEmpty()) {
             return result;
         }

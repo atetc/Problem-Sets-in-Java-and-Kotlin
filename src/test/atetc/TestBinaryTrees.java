@@ -3,11 +3,13 @@ package atetc;
 import atetc.other.trees.binary.*;
 import atetc.structures.BinaryTree;
 import atetc.structures.BinaryTree.Node;
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
@@ -20,23 +22,23 @@ public class TestBinaryTrees {
         assertTrue(Q1.buildInwardSpiralArray(null) == null);
 
         BinaryTree<Integer> tree = new BinaryTree<>(1);
-        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Collections.singletonList(1))));
+        assertThat(Q1.buildInwardSpiralArray(tree), CoreMatchers.<List<Integer>>is(new ArrayList<>(Collections.singletonList(1))));
 
         tree.root.left = new Node<>(2);
-        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 2))));
+        assertThat(Q1.buildInwardSpiralArray(tree), CoreMatchers.<List<Integer>>is(new ArrayList<>(Arrays.asList(1, 2))));
 
         tree.root.right = new Node<>(3);
-        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 3, 2))));
+        assertThat(Q1.buildInwardSpiralArray(tree), CoreMatchers.<List<Integer>>is(new ArrayList<>(Arrays.asList(1, 3, 2))));
 
         tree.root.left.left = new Node<>(4);
         tree.root.left.right = new Node<>(5);
         tree.root.right.right = new Node<>(7);
-        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 7, 5, 4, 2, 3))));
+        assertThat(Q1.buildInwardSpiralArray(tree), CoreMatchers.<List<Integer>>is(new ArrayList<>(Arrays.asList(1, 7, 5, 4, 2, 3))));
 
         tree.root.left.left.left = new Node<>(10);
         tree.root.left.left.right = new Node<>(11);
         tree.root.right.right.right = new Node<>(13);
-        assertThat(Q1.buildInwardSpiralArray(tree), is(new ArrayList<>(Arrays.asList(1, 13, 11,10, 2, 3, 7, 5, 4))));
+        assertThat(Q1.buildInwardSpiralArray(tree), CoreMatchers.<List<Integer>>is(new ArrayList<>(Arrays.asList(1, 13, 11,10, 2, 3, 7, 5, 4))));
     }
 
     @Test

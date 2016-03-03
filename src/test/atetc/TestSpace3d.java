@@ -1,11 +1,11 @@
 package atetc;
 
-import atetc.other.points3d.Q1;
+import atetc.other.space3d.Q1;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class TestPoints3d {
+public class TestSpace3d {
 
     @Test
     public void testPlacePointsIn3D_1(){
