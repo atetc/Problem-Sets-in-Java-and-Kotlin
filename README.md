@@ -22,7 +22,7 @@
 
 ###Testing
 
-[Coverage by tests 1.1 - 1.8](src/test/atetc/TestChap1.java)
+[Coverage by tests 1.1 - 1.8](src/test/java/com/atetc/TestChap1.java)
 
 ##Chapter 2:
 
@@ -44,7 +44,7 @@ EXAMPLE: Input: A->B->C->D->E->C[the same C as earlier] Output: C
 
 ###Testing
 
-[Coverage by tests 2.1 - 2.5](src/test/atetc/TestChap2.java)
+[Coverage by tests 2.1 - 2.5](src/test/java/com/atetc/TestChap2.java)
 
 ##Chapter 3:
 
@@ -70,7 +70,7 @@ Write a program to move the disks from the first tower to the last using stacks.
 
 ###Testing
 
-[Coverage by tests 3.1 - 3.6](src/test/atetc/TestChap3.java)
+[Coverage by tests 3.1 - 3.6](src/test/java/com/atetc/TestChap3.java)
 
 ##Chapter 4:
 
@@ -94,7 +94,7 @@ Write a program to move the disks from the first tower to the last using stacks.
 
 ###Testing
 
-[Coverage by tests 4.1 - 4.8](src/test/atetc/TestChap4.java)
+[Coverage by tests 4.1 - 4.8](src/test/java/com/atetc/TestChap4.java)
 
 ##Chapter 5:
 
@@ -120,7 +120,7 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests 5.1 - 5.7](src/test/atetc/TestChap5.java) 
+[Coverage by tests 5.1 - 5.7](src/test/java/com/atetc/TestChap5.java) 
 
 ##Chapter 7:
 
@@ -130,7 +130,7 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests 7.1 - 7.7](src/test/atetc/TestChap6.java) 
+[Coverage by tests 7.1 - 7.7](src/test/java/com/atetc/TestChap7.java) 
 
 
 #2. Other problems (not from book)
@@ -143,7 +143,7 @@ Output: 2
  
 ###Testing
 
-[Coverage by tests stringss problems](src/test/atetc/TestStrings.java) 
+[Coverage by tests stringss problems](src/test/java/com/atetc/TestStrings.java) 
 
 
 ##Arrays:
@@ -173,7 +173,7 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests arrays problems](src/test/atetc/TestArrays.java) 
+[Coverage by tests arrays problems](src/test/java/com/atetc/TestArrays.java) 
 
 
 ##Matrix:
@@ -184,18 +184,18 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
+[Coverage by tests matrix problems](src/test/java/com/atetc/TestMatrix.java)
 
 
 ##Points in 3D:
 
 ###Solutions
 
-[PointsIn3D.1](src/main/java/com/atetc/other/points3d/Q1.java) 
+[PointsIn3D.1](src/main/java/com/atetc/other/space3d/Q1.java) 
 
 ###Testing
 
-[Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
+[Coverage by tests matrix problems](src/test/java/com/atetc/TestMatrix.java)
 
 
 ##Trees:
@@ -207,7 +207,7 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests trees problems](src/test/atetc/TestTrees.java) 
+[Coverage by tests trees problems](src/test/java/com/atetc/TestTrees.java) 
                                              
                                               
 ##Binary Trees:
@@ -223,7 +223,7 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests binary trees problems](src/test/atetc/TestBinaryTrees.java)
+[Coverage by tests binary trees problems](src/test/java/com/atetc/TestBinaryTrees.java)
 
 
 ##Rectangles:
@@ -235,7 +235,7 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests matrix problems](src/test/atetc/TestMatrix.java)
+[Coverage by tests matrix problems](src/test/java/com/atetc/TestMatrix.java)
 
 
 ##LinkedLists:
@@ -254,12 +254,12 @@ Output: 2
 
 ###Testing
 
-[Coverage by tests matrix problems](src/test/atetc/TestLinkedLists.java)
+[Coverage by tests matrix problems](src/test/java/com/atetc/TestLinkedLists.java)
 
 
 ##Set 2
 
-[SET 2.1] (src/java/atetc/set2/Q1.java) 
+[SET 2.1] (src/java/com/atetc/set2/Q1.java) 
 
                                         Vasya has found a strange device. On the front panel of a device there are: a red button, a blue button and a display showing some positive integer. After clicking the red button, device multiplies the displayed number by two. After clicking the blue button, device subtracts one from the number on the display. If at some point the number stops being positive, the device breaks down. The display can show arbitrarily large numbers. Initially, the display shows number n.
                                         
@@ -285,24 +285,24 @@ Output: 2
                                         
                                         In the second example, doubling the number is unnecessary, so we need to push the blue button nine times.
 
-[SET 2.2] (src/java/atetc/set2/Q2.java) You've got an array of ints (array is NOT sorted). Find two elements without a pair.
+[SET 2.2] (src/java/com/atetc/set2/Q2.java) You've got an array of ints (array is NOT sorted). Find two elements without a pair.
 
 ###Testing
 
-[Coverage by tests 2.1 - 2.3](src/test/atetc/TestSet2.java)
+[Coverage by tests 2.1 - 2.3](src/test/java/com/atetc/TestSet2.java)
 
 ##Set 24
 
-[SET 24.1] (src/java/atetc/set24/Q1.java) Given the number N with up to 10^6 digits and M.
+[SET 24.1] (src/java/com/atetc/set24/Q1.java) Given the number N with up to 10^6 digits and M.
                                             Find the number of partitions where each partition is divisible by M.
                                             If answer is larger then (10^9+7), find the answer modulo (10^9+7)
                                             Example: for input N=12123, M=3 partitions are: [12123], [12][123],[12][12][3],[1212][3]
                                              
-[SET 24.2] (src/java/atetc/set24/Q2.java) Amazon interview.
+[SET 24.2] (src/java/com/atetc/set24/Q2.java) Amazon interview.
                                           Write a method that takes in a positive integer, return the number of 2s between 0 and the input number.
                                           If the input value given is 13, it should return 2 as the number 2 and 12 are between 0 and 13.
                                           If the input value given is 21, it should return 3 as the number 2,12 and 20 are between 0 and 21.
 
 ###Testing
 
-[Coverage by tests 24.1 - 24.4](src/test/atetc/TestSet24.java)
+[Coverage by tests 24.1 - 24.4](src/test/java/com/atetc/TestSet24.java)
